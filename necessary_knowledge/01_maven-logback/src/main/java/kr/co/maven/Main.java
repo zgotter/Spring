@@ -31,6 +31,9 @@ class Main {
 			// statement 정의
 			statement = connection.createStatement();
 
+			// 트랜잭션 관리
+			connection.setAutoCommit(false); // autoCommit 해제
+
 			// MEMBER 테이블 생성
 			statement.execute("create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id))");
 
@@ -50,10 +53,17 @@ class Main {
 
 			}
 
+			connection.commit();
+
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
+			try {
+				connection.rollback(); // SQLException 발생 시 rollback
+			} catch (SQLException ex) {
+				ex.printStackTrace();
+			}
 		} finally {
 			try {
 				resultSet.close();
