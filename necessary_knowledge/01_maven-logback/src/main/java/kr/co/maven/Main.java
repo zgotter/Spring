@@ -22,13 +22,20 @@ class Main {
 			Class.forName("org.h2.Driver");
 
 			// 접속 url
-			String url = "jdbc:h2:~/test;MODE=MySQL"; // MODE=MySQL : MySQL 호환모드 설정
+			//String url = "jdbc:h2:~/test;MODE=MySQL"; // MODE=MySQL : MySQL 호환모드 설정
+			String url = "jdbc:h2:mem:test;MODE=MySQL"; // 메모리 모드 사용
 
 			// Connection 객체 생성
 			connection = DriverManager.getConnection(url, "sa", "");
 
 			// statement 정의
 			statement = connection.createStatement();
+
+			// MEMBER 테이블 생성
+			statement.execute("create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id))");
+
+			// 데이터 입력
+			statement.executeUpdate("insert into member (username, password) values ('shkim', '1234')");
 
 			// MEMBER 테이블 조회
 			resultSet = statement.executeQuery("select id, username, password from member");
