@@ -1,10 +1,23 @@
 package kr.co.maven;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Member {
 
     private int id;
     private String username;
     private String password;
+
+    public Member(ResultSet resultSet) {
+        try {
+            this.id = resultSet.getInt("id");
+            this.username = resultSet.getString("username");
+            this.password = resultSet.getString("password");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public Member(int id, String username, String password) {
         this.id = id;

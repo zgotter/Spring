@@ -42,14 +42,8 @@ class Main {
 			var resultSet = statement.executeQuery("select id, username, password from member");
 
 			while (resultSet.next()) {
-
-				int id = resultSet.getInt("id");
-				String username = resultSet.getString("username");
-				String password = resultSet.getString("password");
-
-				Member member = new Member(id, username, password);
+				var member = new Member(resultSet);
 				logger.info(member.toString());
-
 			}
 
 		} catch (SQLException e) {
