@@ -116,7 +116,7 @@
 
 
 
-### 2.1.4 jdbc
+## 2.2 jdbc
 
 - 표준화된 jdbc 인터페이스를 통하여 다양한 벤더의 API를 사용할 수 있다.
 - 이를 통해 파생된 장점
@@ -125,7 +125,7 @@
 
 
 
-#### 2.1.4.1 jdbc API
+### 2.2.1 jdbc API
 
 - [Java JDBC API](<https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/index.html>)
   - jdbc는 `java.sql`, `javax.sql` 패키지를 통해 제공
@@ -139,7 +139,7 @@
 
 
 
-#### 2.1.4.2 h2 database console 을 통한 테이블 생성/입력/조회
+### 2.2.2 h2 database console 을 통한 테이블 생성/입력/조회
 
 1. h2 database를 이용해 `MEMBER` 테이블 생성
 
@@ -172,11 +172,11 @@
 
 
 
-#### 2.1.4.2 maven project에서 jdbc 사용
+### 2.2.3 maven project에서 jdbc 사용
 
 - `java.sql`은 java SE에 기본으로 들어가 있는 클래스이므로 `pom.xml`에 따로 dependency를 추가할 필요가 없다.
 
-- `Main.java` 내용 참고
+- `Main.java` 내용 참고 
 
 
 
