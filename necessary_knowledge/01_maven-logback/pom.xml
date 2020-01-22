@@ -14,13 +14,19 @@
   <dependencies>
     <dependency>
         <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-classic</artifactId>
+        <artifactId>logback-classic</artifactId> <!-- logback -->
         <version>1.2.3</version>
     </dependency>
     <dependency>
       <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
+      <artifactId>h2</artifactId> <!-- h2 database -->
       <version>1.4.200</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId> <!-- lombok -->
+      <version>1.18.10</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
