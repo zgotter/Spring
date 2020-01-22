@@ -8,40 +8,38 @@ class Main {
 
 	private static Logger logger = LoggerFactory.getLogger(Main.class);
 
-	public static void main(String[] args) {
-		//System.out.println("Hello World!");
+	public static void main(String[] args) throws ClassNotFoundException {
+
 		logger.info("Hello World!!");
 
-		Connection connection = null;
-		Statement statement = null;
-		ResultSet resultSet = null;
+		/*
+			# AutoCloseable 인터페이스 활용
+			  - Java 1.7 부터 지원
+			  - AutoCloseable 인터페이스를 상속 받은 객체들은 자동으로 close() 메서드를 호출하게 된다.
+			  - try-with-resources 문을 이용하여 코드 리펙토링
+		 */
 
-		try {
+		Class.forName("org.h2.Driver");
+		var url = "jdbc:h2:mem:test;MODE=MySQL"; // Java 11 부터는 String 대신 var 를 사용하면 컴파일러가 추론하고 String 타입을 사용하게 된다.
 
-			// 드라이버 로딩
-			Class.forName("org.h2.Driver");
+		try ( var connection = DriverManager.getConnection(url,  "sa", "");
+			  var statement = connection.createStatement() ) {
 
-			// 접속 url
-			//String url = "jdbc:h2:~/test;MODE=MySQL"; // MODE=MySQL : MySQL 호환모드 설정
-			String url = "jdbc:h2:mem:test;MODE=MySQL"; // 메모리 모드 사용
-
-			// Connection 객체 생성
-			connection = DriverManager.getConnection(url, "sa", "");
-
-			// statement 정의
-			statement = connection.createStatement();
-
-			// 트랜잭션 관리
 			connection.setAutoCommit(false); // autoCommit 해제
 
 			// MEMBER 테이블 생성
 			statement.execute("create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id))");
 
 			// 데이터 입력
-			statement.executeUpdate("insert into member (username, password) values ('shkim', '1234')");
+			try {
+				statement.executeUpdate("insert into member (username, password) values ('shkim', '1234')");
+				connection.commit();
+			} catch (SQLException e) {
+				connection.rollback(); // SQLException 발생 시 rollback
+			}
 
 			// MEMBER 테이블 조회
-			resultSet = statement.executeQuery("select id, username, password from member");
+			var resultSet = statement.executeQuery("select id, username, password from member");
 
 			while (resultSet.next()) {
 
@@ -49,37 +47,13 @@ class Main {
 				String username = resultSet.getString("username");
 				String password = resultSet.getString("password");
 
-				logger.info("id: " + id + ", username: " + username + ", password: " + password);
+				Member member = new Member(id, username, password);
+				logger.info(member.toString());
 
 			}
 
-			connection.commit();
-
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			try {
-				connection.rollback(); // SQLException 발생 시 rollback
-			} catch (SQLException ex) {
-				ex.printStackTrace();
-			}
-		} finally {
-			try {
-				resultSet.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			try {
-				statement.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			try {
-				connection.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 
 	}
