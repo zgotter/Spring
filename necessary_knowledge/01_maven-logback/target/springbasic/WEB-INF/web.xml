@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee webapp_4_0.xsd"
+         version="4.0">
+    <display-name>A Simple Application</display-name> <!-- 어플리케이션을 설명하기 위한   내용 -->
+    <servlet>
+        <servlet-name>simple</servlet-name>
+        <servlet-class>kr.co.maven.web.SimpleServlet
+        </servlet-class><!-- servlet-mapping 태그의 url pattern으로 접근이 발생할 때 실행되는 클래스 -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>simple</servlet-name>
+        <url-pattern>/simple</url-pattern><!-- 해당 url pattern으로 접근했을 때 위의 servlet 태그를 동작시켜라 -->
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file><!-- webapp 디렉토리 하위에 위치 -->
+    </welcome-file-list>
+</web-app>

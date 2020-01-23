@@ -1,2 +1,2 @@
-Main-Class:kr.co.maven.Main
+Main-Class:Main
 

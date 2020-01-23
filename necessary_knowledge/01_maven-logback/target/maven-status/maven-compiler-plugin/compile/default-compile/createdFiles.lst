@@ -1,1 +1,3 @@
-kr\co\maven\Main.class
+kr\co\maven\cli\Main.class
+kr\co\maven\web\SimpleServlet.class
+kr\co\maven\cli\Member.class
