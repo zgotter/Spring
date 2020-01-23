@@ -1,0 +1,220 @@
+23-Jan-2020 22:45:18.712 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:        Apache Tomcat/9.0.30
+23-Jan-2020 22:45:18.727 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:          Dec 7 2019 16:42:04 UTC
+23-Jan-2020 22:45:18.727 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:         9.0.30.0
+23-Jan-2020 22:45:18.728 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:               Windows 10
+23-Jan-2020 22:45:18.728 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:            10.0
+23-Jan-2020 22:45:18.729 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+23-Jan-2020 22:45:18.729 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:             C:\Program Files\Java\jdk1.8.0_161\jre
+23-Jan-2020 22:45:18.729 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:           1.8.0_161-b12
+23-Jan-2020 22:45:18.729 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:            Oracle Corporation
+23-Jan-2020 22:45:18.730 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 22:45:18.730 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 22:45:18.879 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.util.logging.config.file=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\conf\logging.properties
+23-Jan-2020 22:45:18.892 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jan-2020 22:45:18.895 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jan-2020 22:45:18.913 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jan-2020 22:45:18.926 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dignore.endorsed.dirs=
+23-Jan-2020 22:45:18.930 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dcatalina.base=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 22:45:18.946 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dcatalina.home=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 22:45:18.961 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.io.tmpdir=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\temp
+23-Jan-2020 22:45:18.974 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NAT Service;C:\Rtools\bin;C:\Program Files\Microsoft MPI\Bin\;C:\app\shkim\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\IDM Computer Solutions\UltraEdit;C:\oracle\instantclient_12_2;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\PuTTY\;C:\Kings\KOS;C:\Kings\KOS\x64;C:\Program Files\Pandoc\;C:\shkim\util\apache-maven-3.6.1\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_161\bin\;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;C:\Ruby23-x64\bin;C:\Ruby22-x64\bin;C:\Ruby25-x64\bin;C:\Users\shkim\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\shkim\AppData\Local\atom\bin;C:\Users\shkim\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3\bin;.]
+23-Jan-2020 22:45:19.459 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+23-Jan-2020 22:45:20.196 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 초기화합니다.
+23-Jan-2020 22:45:20.206 정보 [main] org.apache.catalina.startup.Catalina.load [1,750] 밀리초 내에 서버가 초기화되었습니다.
+23-Jan-2020 22:45:20.259 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+23-Jan-2020 22:45:20.276 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.30]
+23-Jan-2020 22:45:20.305 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\docs]을(를) 배치합니다.
+23-Jan-2020 22:45:20.585 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\docs]에 대한 배치가 [280] 밀리초에 완료되었습니다.
+23-Jan-2020 22:45:20.600 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\examples]을(를) 배치합니다.
+23-Jan-2020 22:45:21.199 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\examples]에 대한 배치가 [599] 밀리초에 완료되었습니다.
+23-Jan-2020 22:45:21.216 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\host-manager]을(를) 배치합니다.
+23-Jan-2020 22:45:21.289 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\host-manager]에 대한 배치가 [73] 밀리초에 완료되었습니다.
+23-Jan-2020 22:45:21.303 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\manager]을(를) 배치합니다.
+23-Jan-2020 22:45:21.370 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\manager]에 대한 배치가 [67] 밀리초에 완료되었습니다.
+23-Jan-2020 22:45:21.375 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\ROOT]을(를) 배치합니다.
+23-Jan-2020 22:45:21.430 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\ROOT]에 대한 배치가 [55] 밀리초에 완료되었습니다.
+23-Jan-2020 22:45:21.451 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+23-Jan-2020 22:45:21.475 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 시작합니다.
+23-Jan-2020 22:45:21.480 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1,260] 밀리초 내에 시작되었습니다.
+23-Jan-2020 22:52:51.864 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]을(를) 배치합니다.
+23-Jan-2020 22:52:58.199 정보 [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+23-Jan-2020 22:52:58.230 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]의 배치가 [6,366] 밀리초에 완료되었습니다.
+23-Jan-2020 23:12:45.135 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:        Apache Tomcat/9.0.30
+23-Jan-2020 23:12:45.141 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:          Dec 7 2019 16:42:04 UTC
+23-Jan-2020 23:12:45.141 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:         9.0.30.0
+23-Jan-2020 23:12:45.141 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:               Windows 10
+23-Jan-2020 23:12:45.142 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:            10.0
+23-Jan-2020 23:12:45.142 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+23-Jan-2020 23:12:45.142 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:             C:\Program Files\Java\jdk1.8.0_161\jre
+23-Jan-2020 23:12:45.142 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:           1.8.0_161-b12
+23-Jan-2020 23:12:45.143 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:            Oracle Corporation
+23-Jan-2020 23:12:45.143 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:12:45.143 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:12:45.146 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.util.logging.config.file=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\conf\logging.properties
+23-Jan-2020 23:12:45.147 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jan-2020 23:12:45.164 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jan-2020 23:12:45.168 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jan-2020 23:12:45.170 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dignore.endorsed.dirs=
+23-Jan-2020 23:12:45.171 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dcatalina.base=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:12:45.173 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dcatalina.home=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:12:45.187 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.io.tmpdir=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\temp
+23-Jan-2020 23:12:45.193 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NAT Service;C:\Rtools\bin;C:\Program Files\Microsoft MPI\Bin\;C:\app\shkim\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\IDM Computer Solutions\UltraEdit;C:\oracle\instantclient_12_2;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\PuTTY\;C:\Kings\KOS;C:\Kings\KOS\x64;C:\Program Files\Pandoc\;C:\shkim\util\apache-maven-3.6.1\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_161\bin\;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;C:\Ruby23-x64\bin;C:\Ruby22-x64\bin;C:\Ruby25-x64\bin;C:\Users\shkim\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\shkim\AppData\Local\atom\bin;C:\Users\shkim\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3\bin;.]
+23-Jan-2020 23:12:45.482 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+23-Jan-2020 23:12:46.201 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 초기화합니다.
+23-Jan-2020 23:12:46.220 정보 [main] org.apache.catalina.startup.Catalina.load [1,305] 밀리초 내에 서버가 초기화되었습니다.
+23-Jan-2020 23:12:46.264 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+23-Jan-2020 23:12:46.271 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.30]
+23-Jan-2020 23:12:46.311 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]을(를) 배치합니다.
+23-Jan-2020 23:12:47.247 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+23-Jan-2020 23:12:47.312 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]의 배치가 [1,001] 밀리초에 완료되었습니다.
+23-Jan-2020 23:12:47.319 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\docs]을(를) 배치합니다.
+23-Jan-2020 23:12:47.377 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\docs]에 대한 배치가 [58] 밀리초에 완료되었습니다.
+23-Jan-2020 23:12:47.391 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\examples]을(를) 배치합니다.
+23-Jan-2020 23:12:47.904 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\examples]에 대한 배치가 [513] 밀리초에 완료되었습니다.
+23-Jan-2020 23:12:47.908 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\host-manager]을(를) 배치합니다.
+23-Jan-2020 23:12:47.968 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\host-manager]에 대한 배치가 [60] 밀리초에 완료되었습니다.
+23-Jan-2020 23:12:47.984 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\manager]을(를) 배치합니다.
+23-Jan-2020 23:12:48.049 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\manager]에 대한 배치가 [65] 밀리초에 완료되었습니다.
+23-Jan-2020 23:12:48.066 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\ROOT]을(를) 배치합니다.
+23-Jan-2020 23:12:48.121 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\ROOT]에 대한 배치가 [55] 밀리초에 완료되었습니다.
+23-Jan-2020 23:12:48.144 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8080"]을(를) 시작합니다.
+23-Jan-2020 23:12:48.164 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 시작합니다.
+23-Jan-2020 23:12:48.185 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1,953] 밀리초 내에 시작되었습니다.
+23-Jan-2020 23:13:48.692 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/springbasic]의 배치를 제거합니다.
+23-Jan-2020 23:16:28.954 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]을(를) 배치합니다.
+23-Jan-2020 23:16:34.584 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:        Apache Tomcat/9.0.30
+23-Jan-2020 23:16:34.589 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:          Dec 7 2019 16:42:04 UTC
+23-Jan-2020 23:16:34.590 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:         9.0.30.0
+23-Jan-2020 23:16:34.590 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:               Windows 10
+23-Jan-2020 23:16:34.591 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:            10.0
+23-Jan-2020 23:16:34.591 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+23-Jan-2020 23:16:34.591 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:             C:\Program Files\Java\jdk1.8.0_161\jre
+23-Jan-2020 23:16:34.592 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:           1.8.0_161-b12
+23-Jan-2020 23:16:34.592 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:            Oracle Corporation
+23-Jan-2020 23:16:34.592 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:16:34.593 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:16:34.595 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.util.logging.config.file=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\conf\logging.properties
+23-Jan-2020 23:16:34.596 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jan-2020 23:16:34.613 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jan-2020 23:16:34.618 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jan-2020 23:16:34.621 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dignore.endorsed.dirs=
+23-Jan-2020 23:16:34.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dcatalina.base=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:16:34.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Dcatalina.home=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30
+23-Jan-2020 23:16:34.652 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트: -Djava.io.tmpdir=C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\temp
+23-Jan-2020 23:16:34.666 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NAT Service;C:\Rtools\bin;C:\Program Files\Microsoft MPI\Bin\;C:\app\shkim\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\IDM Computer Solutions\UltraEdit;C:\oracle\instantclient_12_2;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\PuTTY\;C:\Kings\KOS;C:\Kings\KOS\x64;C:\Program Files\Pandoc\;C:\shkim\util\apache-maven-3.6.1\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_161\bin\;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;C:\Ruby23-x64\bin;C:\Ruby22-x64\bin;C:\Ruby25-x64\bin;C:\Users\shkim\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\shkim\AppData\Local\atom\bin;C:\Users\shkim\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3\bin;.]
+23-Jan-2020 23:16:34.991 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8080"]을(를) 초기화합니다.
+23-Jan-2020 23:16:35.279 정보 [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+23-Jan-2020 23:16:35.303 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]의 배치가 [6,349] 밀리초에 완료되었습니다.
+23-Jan-2020 23:16:35.715 심각 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 구성요소 [Connector[HTTP/1.1-8080]]을(를) 초기화하지 못했습니다.
+	org.apache.catalina.LifecycleException: 프로토콜 핸들러 초기화가 실패했습니다.
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:983)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1057)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:584)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:303)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:433)
+		at sun.nio.ch.Net.bind(Net.java:425)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+		at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:229)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:212)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1141)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1154)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:575)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:74)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+		... 13 more
+23-Jan-2020 23:16:35.731 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 초기화합니다.
+23-Jan-2020 23:16:35.737 심각 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 구성요소 [Connector[AJP/1.3-8009]]을(를) 초기화하지 못했습니다.
+	org.apache.catalina.LifecycleException: 프로토콜 핸들러 초기화가 실패했습니다.
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:983)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1057)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:584)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:303)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+	Caused by: java.net.BindException: Address already in use: bind
+		at sun.nio.ch.Net.bind0(Native Method)
+		at sun.nio.ch.Net.bind(Net.java:433)
+		at sun.nio.ch.Net.bind(Net.java:425)
+		at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+		at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:229)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:212)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1141)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1154)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:575)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+		... 13 more
+23-Jan-2020 23:16:35.745 정보 [main] org.apache.catalina.startup.Catalina.load [1,414] 밀리초 내에 서버가 초기화되었습니다.
+23-Jan-2020 23:16:35.799 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+23-Jan-2020 23:16:35.806 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.30]
+23-Jan-2020 23:16:35.846 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]을(를) 배치합니다.
+23-Jan-2020 23:16:36.834 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+23-Jan-2020 23:16:36.897 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]의 배치가 [1,051] 밀리초에 완료되었습니다.
+23-Jan-2020 23:16:36.904 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\docs]을(를) 배치합니다.
+23-Jan-2020 23:16:36.971 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\docs]에 대한 배치가 [67] 밀리초에 완료되었습니다.
+23-Jan-2020 23:16:36.988 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\examples]을(를) 배치합니다.
+23-Jan-2020 23:16:37.525 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\examples]에 대한 배치가 [537] 밀리초에 완료되었습니다.
+23-Jan-2020 23:16:37.542 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\host-manager]을(를) 배치합니다.
+23-Jan-2020 23:16:37.594 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\host-manager]에 대한 배치가 [53] 밀리초에 완료되었습니다.
+23-Jan-2020 23:16:37.606 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\manager]을(를) 배치합니다.
+23-Jan-2020 23:16:37.660 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\manager]에 대한 배치가 [54] 밀리초에 완료되었습니다.
+23-Jan-2020 23:16:37.672 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\ROOT]을(를) 배치합니다.
+23-Jan-2020 23:16:37.722 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\ROOT]에 대한 배치가 [50] 밀리초에 완료되었습니다.
+23-Jan-2020 23:16:37.748 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1,978] 밀리초 내에 시작되었습니다.
+23-Jan-2020 23:16:37.770 심각 [main] org.apache.catalina.core.StandardServer.await 주소 [localhost]와(과) 포트 [8005]에, 서버 셧다운 소켓을 생성하지 못했습니다. (base 포트 [8005], offset [0])
+	java.net.BindException: Address already in use: JVM_Bind
+		at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+		at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+		at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+		at java.net.ServerSocket.bind(ServerSocket.java:375)
+		at java.net.ServerSocket.<init>(ServerSocket.java:237)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:584)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:721)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:667)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+23-Jan-2020 23:16:37.779 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8080"]을(를) 일시 정지 중
+23-Jan-2020 23:16:37.807 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 일시 정지 중
+23-Jan-2020 23:16:37.809 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+23-Jan-2020 23:16:37.838 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8080"]을(를) 중지시킵니다.
+23-Jan-2020 23:16:37.844 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8080"]을(를) 소멸시킵니다.
+23-Jan-2020 23:16:37.872 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 중지시킵니다.
+23-Jan-2020 23:16:37.891 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["ajp-nio-8009"]을(를) 소멸시킵니다.
+23-Jan-2020 23:17:25.856 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/springbasic]의 배치를 제거합니다.
+23-Jan-2020 23:17:35.902 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]을(를) 배치합니다.
+23-Jan-2020 23:17:41.966 정보 [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+23-Jan-2020 23:17:41.989 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]의 배치가 [6,087] 밀리초에 완료되었습니다.
+23-Jan-2020 23:27:52.617 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.reload 컨텍스트 [/springbasic]을(를) 다시 로드합니다.
+23-Jan-2020 23:27:52.623 정보 [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload 이름이 [/springbasic]인 컨텍스트를 다시 로드하는 작업이 시작되었습니다.
+23-Jan-2020 23:27:53.369 정보 [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+23-Jan-2020 23:27:53.389 정보 [Catalina-utility-2] org.apache.catalina.core.StandardContext.reload 이름이 [/springbasic]인 컨텍스트를 다시 로드하는 것을 완료했습니다.
+23-Jan-2020 23:50:14.581 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/springbasic]의 배치를 제거합니다.
+23-Jan-2020 23:50:14.624 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]을(를) 배치합니다.
+23-Jan-2020 23:50:20.483 정보 [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+23-Jan-2020 23:50:20.494 정보 [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [C:\shkim\intellij\Spring\necessary_knowledge\01_maven-logback\tomcat\apache-tomcat-9.0.30\webapps\springbasic.war]의 배치가 [5,869] 밀리초에 완료되었습니다.
