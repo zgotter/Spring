@@ -98,8 +98,8 @@
 #### 2.1.3.2 Module 세팅 (JDK 설정)
 
 - `pom.xml` 파일에서 `properties` 태그에 Import 시 지정한 JDK 버전을 입력한다.
-
-- Import 할 때 설정한 JDK 버전에 맞게 `Project > Open Module Settings` 에서 JDK 버전 설정한다.
+- Import 할 때 설정한 JDK 버전에 맞게 `Module명 우클릭 > Open Module Settings` 에서 JDK 버전 설정한다. (또는 `Module명 우클릭 > F4`)
+  - `Project` 메뉴와 `Modules` 메뉴의 JDK 버전 모두 설정해준다.
 
 
 
