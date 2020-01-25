@@ -24,6 +24,7 @@ class Main {
             statement.execute("create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id))");
             try {
                 statement.executeUpdate("insert into member (username, password) values ('shkim', '1234')");
+                statement.executeUpdate("insert into member (username, password) values ('shkim', '5678')");
                 connection.commit();
             } catch (SQLException e) {
                 e.printStackTrace();
