@@ -12,12 +12,17 @@ class Main {
 
     private static Logger logger = LoggerFactory.getLogger(Main.class);
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         logger.info("Hello World!");
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
-        Dao dao = context.getBean("dao", Dao.class);
+        try {
+            Class.forName("org.h2.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
-        dao.run();
+        ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
+        Dao2 dao2 = context.getBean("dao2", Dao2.class);
+        dao2.run();
     }
 }

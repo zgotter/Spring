@@ -3,15 +3,14 @@ package kr.co.test.cli;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 @Slf4j
-public class Dao { // DAO: Data Access Object
+public class Dao2 { // DAO: Data Access Object
 
     private Connection connection;
 
-    public Dao(Connection connection) {
+    public Dao2(Connection connection) {
         this.connection = connection; // Connection을 DI로 주입받는다.
     }
 

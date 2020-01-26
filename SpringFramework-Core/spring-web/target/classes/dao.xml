@@ -4,19 +4,25 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="daoFactory" class="kr.co.test.cli.DaoFactory"/>
-    <bean id="dao" factory-bean="daoFactory" factory-method="createDao"/>
+    <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
+        <constructor-arg name="url" value="jdbc:h2:mem:test" />
+        <constructor-arg name="user" value="sa" />
+        <constructor-arg name="password" value="" />
+    </bean>
 
-    <!--
-        Bean 을 이용해 객체 간의 관계 설정
-          - 설정을 보고 객체 간의 관계를 파악할 수 있다.
-          - Main 클래스에서 container 사용을 위한 코드를 제외한 나머지 코드는 비즈니스 코드만 사용할 수 있다. (개발에 용이)
-     -->
-    <bean id="a" class="kr.co.test.cli.di.A">
-        <property name="b" ref="b"/>
+    <!-- Connection 객체 의존성 주입 -->
+    <bean id="connection" class="java.sql.Connection"
+          factory-bean="connectionFactory"
+          factory-method="createConnection" />
+
+    <bean id="dao" class="kr.co.test.cli.Dao">
+        <constructor-arg ref="connection"/>
     </bean>
-    <bean id="b" class="kr.co.test.cli.di.B">
-        <property name="a" ref="a"/>
+
+    <bean id="dao2" class="kr.co.test.cli.Dao2">
+        <constructor-arg ref="connection"/>
     </bean>
+
+
 
 </beans>
