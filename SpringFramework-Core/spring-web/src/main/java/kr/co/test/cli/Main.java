@@ -2,6 +2,8 @@ package kr.co.test.cli;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,7 +14,9 @@ class Main {
 
     public static void main(String[] args) throws ClassNotFoundException {
         logger.info("Hello World!");
-        Dao dao = new Dao();
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
+        Dao dao = context.getBean(Dao.class);
         dao.run();
     }
 }
