@@ -15,6 +15,13 @@
     </properties>
 
     <dependencies>
+        <!-- Spring 관련 dependency 추가 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.3.RELEASE</version>
+        </dependency>
+        <!-- // Spring 관련 dependency 추가 -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId> <!-- logback -->
