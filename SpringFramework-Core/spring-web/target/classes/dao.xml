@@ -19,7 +19,7 @@
         <constructor-arg ref="connection"/>
     </bean>
 
-    <bean id="dao2" class="kr.co.test.cli.Dao2">
+    <bean id="dao2" class="kr.co.test.cli.Dao2" lazy-init="true">
         <constructor-arg ref="connection"/>
     </bean>
 
