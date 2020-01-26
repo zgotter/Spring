@@ -6,8 +6,12 @@ import java.sql.SQLException;
 
 @Slf4j
 public class Dao { // DAO: Data Access Object
-    public void run() {
 
+    /*public Dao(String param) {
+
+    }*/
+
+    public void run() {
         try {
             Class.forName("org.h2.Driver");
         } catch (ClassNotFoundException e) {
