@@ -1,14 +1,13 @@
 package kr.co.test.cli.di;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-
-        boolean condition = true;
-
-        // A 객체의 B의 의존성 주입 (Dependency Injection)
-        // - Main 클래스에서 객체 간의 의존성을 주입한다.
-        B b = new B(condition);
-        A a = new A(b); // A 클래스는 B 클래스가 가지는 condition 값을 몰라도 된다.
+        // DI 원칙을 이용해 IoC Container가 만들어 졌고, Container를 spring을 이용해 사용
+        ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
+        A a = context.getBean("a", A.class);
         a.print();
     }
 }
