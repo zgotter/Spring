@@ -7,9 +7,9 @@ import java.sql.SQLException;
 @Slf4j
 public class Dao { // DAO: Data Access Object
 
-    /*public Dao(String param) {
-
-    }*/
+    public static Dao createDao() {
+        return new Dao();
+    }
 
     public void run() {
         try {
