@@ -16,7 +16,7 @@
         <property name="b" ref="b"/>
     </bean>
     <bean id="b" class="kr.co.test.cli.di.B">
-        <constructor-arg value="true"/>
+        <property name="a" ref="a"/>
     </bean>
 
 </beans>

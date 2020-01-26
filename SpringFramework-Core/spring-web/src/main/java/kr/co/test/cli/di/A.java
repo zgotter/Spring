@@ -1,7 +1,12 @@
 package kr.co.test.cli.di;
 
 public class A {
-    // DI 원칙은 코드 레벨에서 객체간의 관계를 맺지 않는 것이다.
+    private B b = new B();
+
+    public void print() {
+        b.print();
+    }
+    /*
     private B b;
 
     public void setB(B b) {
@@ -11,4 +16,5 @@ public class A {
     public void print() {
         System.out.println(b.calc());
     }
+    */
 }
