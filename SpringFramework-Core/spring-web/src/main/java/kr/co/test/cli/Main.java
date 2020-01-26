@@ -17,9 +17,6 @@ class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
         Dao dao = context.getBean("dao", Dao.class);
-        Dao new_dao = context.getBean("new_dao", Dao.class);
-
-        System.out.println(dao == new_dao); // 서로 다른 bean 객체로 생성됐기 때문에 해시값이 다르다.
 
         dao.run();
     }

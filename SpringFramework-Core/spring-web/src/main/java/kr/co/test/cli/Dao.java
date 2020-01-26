@@ -7,10 +7,6 @@ import java.sql.SQLException;
 @Slf4j
 public class Dao { // DAO: Data Access Object
 
-    public static Dao createDao() {
-        return new Dao();
-    }
-
     public void run() {
         try {
             Class.forName("org.h2.Driver");
