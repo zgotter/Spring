@@ -1,69 +1,4 @@
-# Ch02. Spring Framework Core
-
-- [Spring Framework Core](<https://docs.spring.io/spring/docs/5.2.3.RELEASE/spring-framework-reference/core.html#spring-core>)
-  - IoC Container, Events, Resources, Validation, SpEL, AOP
-
-<br>
-
-# 1. IoC Container
-
-## 1.1 Introduction to the Spring IoC Container and Beans
-
-- 스프링은 IoC(Inversion of Control) 이라는 원칙을 구현한 프레임워크이다.
-- 스프링 프레임워크는 `ApplicationContext` 라는 인터페이스를 통해 IoC를 구현하고 있다.
-
-<br>
-
-## 1.2 Container Overview
-
-- `org.springframework.context.ApplicationContext` 인터페이스가 가장 핵심적인 부분이다.
-
-<img src="https://docs.spring.io/spring/docs/5.2.3.RELEASE/spring-framework-reference/images/container-magic.png" />
-
-- Spring Container를 통해서 `POJO(Plan Old Java Object)`  로 만들어진 나의 Business Object를 Spring에서 제공하는 `Configuration Metadata`에 맞춰서 설정 정보를 만들어주면 스프링이 해당 객체들을 자동으로 만들어주고 사용할 수 있게끔 해준다.
-
-<br>
-
-### 1.2.1 Configuration Metadata
-
-- 스프링이 제공하는 여러 가지 설정 방법 중 `XML` 과 `Annotation` 을 통한 방법들이 있다.
-
-<br>
-
-#### 1.2.1.1 XML 기반 설정 방법
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="..." class="...">  
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
-
-    <bean id="..." class="...">
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
-
-    <!-- more bean definitions go here -->
-
-</beans>
-```
-
-<br>
-
-### 1.2.2 Instantiating a Container
-
-- 컨테이너 사용
-
-- `spring-web` 실습 : CLI 프로그램 리펙토링
-
-- maven central 에서 dependency 검색
-  - 검색어 : org.springframework spring-core
-
-<br>
+# Ch01. IoC Container
 
 ## 1.3 Bean Overview
 
@@ -94,7 +29,7 @@
 
 - bean 인스턴스화 방법
 
-  1. 생성자 이용 (Instantiation with a Constructor)
+  1. **생성자 이용 (Instantiation with a Constructor)**
 
      - `<bean/>` 에 `id`와 `class` 만 지정
 
@@ -105,7 +40,7 @@
      - 생성자를 이용한 bean 생성 시, 지정한 클래스에 기본 생성자가 아닌 매개변수를 받는 생성자가 존재하면 에러가 발생한다. (기본 생성자가 만들어지지 않기 때문)
      - 이는 bean 설정으로 해결 가능하다.
 
-  2. static 이용 (Instantiation with a Static Factory Method)
+  2. **static 이용 (Instantiation with a Static Factory Method)**
 
      - `factory-method` 속성(attribute)를 추가한다.
 
@@ -130,7 +65,7 @@
 
      - factory-method` 속성에 객체 생성에 관련된 메서드명을 입력한다.
 
-  3. Factory이용 (Instantiation by Using an Instance Factory Method )
+  3. **Factory이용 (Instantiation by Using an Instance Factory Method )**
 
      - 2개의 bean이 필요
 
@@ -148,4 +83,54 @@
              factory-method="createClientServiceInstance"/>
          ```
 
-         
+<br>
+
+## 1.4 Dependencies (의존성)
+
+- 어플리케이션은 하나 이상의 객체로 이루어져 있다.
+- 그 객체간의 함께 working을 하게 된다.
+- 객체 간의 의존성 관계가 발생하게 된다.
+- `kr.co.test.cli.di` 패키지의 클래스 예제 파일 참고
+
+<br>
+
+### 1.4.1 Dependency Injection (DI)
+
+- DI를 이용해 Bean을 통해 객체 간의 관계를 설정하고 객체 간의 의존성을 디커플링할 수 있다.
+
+- DI를 통해 테스트를 좀 더 수월하게 할 수 있다.
+  - 인터페이스를 이용해 `stub` 이나 `mock` 을 만들 수 있다.
+
+<br>
+
+#### 1.4.1.1 생성자 기반 의존성 주입 (Constructor-based Dependency Injection)
+
+- bean 설정 시, `constructor-arg` 태그를 이용하여 객체 간 의존성 주입
+- 객체가 생성될 때, 한 번만 실행되기 때문에 객체 생성 시 필요한 코드를 넣고 싶을 때 사용
+- 생성자 기반 의존성 주입 권장
+
+<br>
+
+#### 1.4.1.2 `Setter` 기반 의존성 주입 (Setter-based Dependency Injection)
+
+- bean 설정 시, `property` 태그를 이용하여 `setter` 지정
+- 코드가 실행되다가 객체의 dependency를 변경하고 싶을 때 Runtime의 어느 시점에서든지 관계를 재설정할 수 있다.
+- 하지만, 객체 간의 관계는 객체 생성 시 정의하고 이후에는 변경을 안 하는 것이 복잡도를 감소시킨다.
+
+<br>
+
+#### 1.4.1.3 의존성 처리 프로세스 (Dependency Resolution Process)
+
+- `ApplicationContext`가 XML, Java Code, Annotation을 통해 Configuration Metadata를 읽어서 Beans에 대한 설정을 확인
+- 각각의 Bean들에 대해 properties, constructor(생성자), factory method를 통해 Bean들을 제공한다.
+
+<br>
+
+#### 1.4.1.4 상호 참조 (Circular dependencies)
+
+- A 클래스가 B 클래스에 의존성이 있고, B 클래스가 A 클래스에 의존성이 있을 때, Spring Framework는 서로 간의 상호 참조가 가능하기 때문에 서로 만들 지 못하는 상황이 발생하는 데 이를 상호 참조라고 한다.
+
+<br>
+
+### 1.4.2 의존성 및 설정 (Dependencies and Configuration in Detail)
+
