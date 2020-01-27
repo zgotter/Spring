@@ -1,5 +1,7 @@
 package test;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -30,27 +32,9 @@ class A {
 
 }
 
+@EqualsAndHashCode
+@AllArgsConstructor
 class B {
     private int b1;
     private String b2;
-
-    public B(int b1, String b2) {
-        this.b1 = b1;
-        this.b2 = b2;
-    }
-
-    // Alt + insert -> equals() and hashCode()
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof B)) return false;
-        B b = (B) o;
-        return b1 == b.b1 &&
-                Objects.equals(b2, b.b2);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(b1, b2);
-    }
 }
