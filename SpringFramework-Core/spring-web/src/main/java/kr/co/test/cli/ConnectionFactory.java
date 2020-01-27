@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 @Slf4j
-public class ConnectionFactory implements DisposableBean {
+public class ConnectionFactory {
     private String driverClass;
     private String url;
     private String user;
@@ -38,7 +38,7 @@ public class ConnectionFactory implements DisposableBean {
         this.connection = createConnection();
     }
 
-    @Override
+
     public void destroy() throws Exception {
         log.info("destroy");
         if (this.connection != null) {

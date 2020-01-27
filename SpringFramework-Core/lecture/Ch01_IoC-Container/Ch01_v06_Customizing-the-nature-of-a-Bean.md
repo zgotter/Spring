@@ -54,6 +54,8 @@
 
 **2) XML의 `init-method` 설정**
 
+- bean의 `init-method` 속성 값으로 bean 생성 시 실행할 메서드 지정
+
 - 소스 코드 참고
 
 <br>
@@ -69,4 +71,20 @@
 - `org.springframework.beans.factory.DisposableBean`
   - [API 문서](<https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/DisposableBean.html>)
   - `destroy()` 메서드 하나만 가지고 있는 인터페이스이다.
+- Connection 객체 close를 하는 데 활용
 - 소스 코드 참고
+
+<br>
+
+**2) XML의 `destroy-method` 설정**
+
+- bean의 `destroy-method` 속성 값으로 bean 종료 시 실행할 메서드 지정
+- 소스 코드 참고
+
+<br>
+
+#### 1.6.1.5 Default Initialization and Destroy Methods
+
+- 매번 bean들에다가 `init-method` 또는 `destroy-method`를 매번 정의해주기 귀찮을 때는 `<beans>` 의 속성에다가 `default-init-method="init 메서드명"`, `default-destroy-method="destroy 메서드명"` 을 지정하면 모든 `<bean>` 의 생성 및 종료 시 마다 init method와 destroy method를 실행시켜준다.
+- 소스 코드 참고
+- bean과 bean 간의 의존성 설정과 bean들 사이에 만들어지는 순서 설정에도 해당 기능이 영향을 미치게 된다.

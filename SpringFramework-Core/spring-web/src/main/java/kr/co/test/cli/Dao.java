@@ -15,6 +15,14 @@ public class Dao { // DAO: Data Access Object
         this.connection = connection; // Connection을 DI로 주입받는다.
     }
 
+    void init() {
+        log.info("dao init");
+    }
+
+    void destroy() {
+        log.info("dao destroy");
+    }
+
     public void run() throws SQLException {
 
         var statement = connection.createStatement();

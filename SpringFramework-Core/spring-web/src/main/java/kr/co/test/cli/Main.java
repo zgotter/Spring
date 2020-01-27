@@ -16,7 +16,7 @@ class Main {
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
         ConnectionFactory factory = context.getBean(ConnectionFactory.class);
         Connection connection = factory.getConnection();
-        log.info("" + (connection != null)); // true 객체가 만들어진 것 확인
+        log.info("" + (connection != null)); // true : 객체가 만들어진 것 확인
         context.close();
         /*
             close() 메서드를 호출함으로써 IoC 컨테이너가 자신들이 가지고 있는 Bean들에 대해서 destroy 메서드가 있는 지
