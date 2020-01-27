@@ -121,3 +121,31 @@
   - 생성자 (Constructor)
   - Setter 메서드
   - Field
+
+<br>
+
+### 7.2.7 `@Value`
+
+- 어플리케이션에서 XML 이외에도 `application.properties` 라는 설정 파일을 만들게 된다.
+- 그 안에 있는 `properties` 파일을 읽어들인다.
+- key-value 형태로 `properties`의 값들을 놓고, Spring 프로그램에서 사용하게 된다.
+- 주로 다음과 같은 값들을 `properties` 파일로 별도로 빼서 사용하곤 한다.
+  - JDBC의 `driverClass`, `url`, `user` 등
+- `@PropertySource`로  `properties` 파일을 읽어온 뒤 `@Value` annotation을 이용해 파일 안의 내용을 사용할 수 있다.
+- 사용 시, lombok의 `@Value`와 혼동하지 않도록 주의해야 한다.
+- `properties` 파일에 없는 Key를 사용하면 null이 아닌 문자열이 할당된다.
+
+<br>
+
+### 7.2.8 `@PropertySource`
+
+- `properties` 파일을 읽기 위해 해당 annotation 사용
+
+- 해당 annotation의 매개변수로 `properties` 파일 지정
+
+  ```java
+  @PropertySource("classpath:application.properties")
+  ```
+
+  - `classpath`는 `main`인 경우에는 `java`와 `resources` 에 잡힌다.
+
