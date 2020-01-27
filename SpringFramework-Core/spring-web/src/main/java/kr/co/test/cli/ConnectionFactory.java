@@ -2,14 +2,14 @@ package kr.co.test.cli;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.DisposableBean;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 @Slf4j
-public class ConnectionFactory {
+public class ConnectionFactory implements DisposableBean {
     private String driverClass;
     private String url;
     private String user;
@@ -36,5 +36,13 @@ public class ConnectionFactory {
     public void init() throws Exception {
         log.info("init");
         this.connection = createConnection();
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        log.info("destroy");
+        if (this.connection != null) {
+            this.connection.close();
+        }
     }
 }

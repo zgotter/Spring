@@ -24,7 +24,7 @@
 
 #### 1.6.1.2 Callback 함수 구현 방법
 
-1. `InitializingBean` 인터페이스 구현
+1. `InitializingBean`, `DisposableBean` 인터페이스 구현
 2. JSR-250의 `@PostConstruct` 또는 `@PreDestroy` annotation 사용
 3. XML의 `init-method`, `destroy-method` 설정
 
@@ -56,3 +56,17 @@
 
 - 소스 코드 참고
 
+<br>
+
+#### 1.6.1.4 Destruction Callbacks
+
+- bean이 종료될 때 동작할 callback들에 대한 설정
+
+<br>
+
+**1) `DisposableBean` 인터페이스 구현**
+
+- `org.springframework.beans.factory.DisposableBean`
+  - [API 문서](<https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/DisposableBean.html>)
+  - `destroy()` 메서드 하나만 가지고 있는 인터페이스이다.
+- 소스 코드 참고
