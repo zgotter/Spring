@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
+    <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory" init-method="init"> <!-- init-method 속성 값에 bean 생성 후 실행하고 싶은 메서드명 입력 -->
         <constructor-arg name="driverClass" value="org.h2.Driver" />
         <constructor-arg name="url" value="jdbc:h2:mem:test" />
         <constructor-arg name="user" value="sa" />

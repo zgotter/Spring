@@ -1,13 +1,15 @@
 package kr.co.test.cli;
 
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionFactory implements InitializingBean {
+@Slf4j
+public class ConnectionFactory {
     private String driverClass;
     private String url;
     private String user;
@@ -31,9 +33,8 @@ public class ConnectionFactory implements InitializingBean {
         return DriverManager.getConnection(this.url, this.user, this.password);
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-          // bean이 만들어진 다음에 실행될 내용 작성
-        this.connection = createConnection(); // Connection 미리 만들어두기
+    public void init() throws Exception {
+        log.info("init");
+        this.connection = createConnection();
     }
 }

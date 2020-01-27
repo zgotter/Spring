@@ -51,3 +51,8 @@
 - `ConnectionFactory.java` 참고  
 
 <br>
+
+**2) XML의 `init-method` 설정**
+
+- 소스 코드 참고
+
