@@ -98,3 +98,10 @@
 - 이름이 존재하지 않을 때 **같은 타입**의 bean이 존재 할 경우 어떤 bean을 Autowired할 지 알지 못해 Spring이 에러를 발생시킨다.
 - 이 때, 먼저 실행하고자 하는 bean에 `@Primary`  annotation을 지정하게 되면 `@Primary`가 붙은 bean부터 실행하게 된다.
 
+<br>
+
+### 7.2.5 `@Qualifier`
+
+- 같은 타입의 bean을 만들 때 XML 방식에서 bean의 속성으로 `qualifier` 를 지정할 수 있다.
+- `@Qualifier` annotation의 매개변수로 관계를 설정할 bean의 XML 설정 중 `qualifier` 의 `value`로 지정된 `id` 값을 넣어주게 되면 같은 타입의 bean들 중에 `id`가 일치하는 bean을 선택하여 관계를 설정하게 된다.
+- 
