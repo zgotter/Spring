@@ -9,7 +9,7 @@ import javax.annotation.PostConstruct;
 
 @Slf4j
 public class A {
-    @Autowired @Qualifier("b1") private B b;
+    @Autowired @Qualifier("b2") private B b;
     @Autowired private ApplicationContext context;
 
     @PostConstruct

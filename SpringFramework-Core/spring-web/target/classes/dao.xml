@@ -31,15 +31,15 @@
 
     <!-- ApplicationContextAware 인터페이스를 구현한 A 클래스 bean 등록 -->
     <bean class="kr.co.test.cli.aware.A" />
-
-    <!-- @Autowired annotation 사용을 위한 A 클래스 bean 등록 -->
+    <!--
     <bean class="kr.co.test.cli.annotation.B">
         <qualifier value="b1" />
     </bean>
     <bean class="kr.co.test.cli.annotation.B">
         <qualifier value="b2" />
     </bean>
-    <!--<bean class="kr.co.test.cli.annotation.AppConfig" />-->
+    -->
+    <bean class="kr.co.test.cli.annotation.AppConfig" />
     <bean class="kr.co.test.cli.annotation.A" />
 
     <!--
