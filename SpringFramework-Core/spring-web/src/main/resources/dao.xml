@@ -5,6 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
+        <constructor-arg name="driverClass" value="org.h2.Driver" />
         <constructor-arg name="url" value="jdbc:h2:mem:test" />
         <constructor-arg name="user" value="sa" />
         <constructor-arg name="password" value="" />

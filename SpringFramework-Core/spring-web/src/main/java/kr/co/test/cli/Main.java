@@ -15,12 +15,6 @@ class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         logger.info("Hello World!");
 
-        try {
-            Class.forName("org.h2.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
         ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
         Dao2 dao2 = context.getBean("dao2", Dao2.class);
         dao2.run();
