@@ -75,3 +75,26 @@
   - bean의 이름(`name`)을 사용
   - bean의 유형(`type`)을 사용
 - `annotation` 패키지 하위의 소스 코드 참고
+
+<br>
+
+**`@Autowired (required = false)`**
+
+- `@Autowired` annotation을 지정한 필드에 대한 `<bean>` 이 없는 경우 에러가 발생함
+- 에러 발생 시 Container가 종료됨
+- 이 때, `(required = false)` 를 지정하면 Container가 종료되지 않음
+
+<br>
+
+**`@Autowired` 를 통한 `Aware` 구현**
+
+- `Aware` 인터페이스를 구현하지 않고 `@Autowired` annotation을 활용하여 `ApplicationContext`를 주입할 수 있다.
+
+<br>
+
+### 7.2.4 `@Primary`
+
+- Autowired를 할 때 보통 이름(`name`) 또는 타입(`type`)을 통해 bean 사이의 관계를 설정한다.
+- 이름이 존재하지 않을 때 **같은 타입**의 bean이 존재 할 경우 어떤 bean을 Autowired할 지 알지 못해 Spring이 에러를 발생시킨다.
+- 이 때, 먼저 실행하고자 하는 bean에 `@Primary`  annotation을 지정하게 되면 `@Primary`가 붙은 bean부터 실행하게 된다.
+

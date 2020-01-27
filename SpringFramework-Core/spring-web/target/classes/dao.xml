@@ -33,7 +33,8 @@
     <bean class="kr.co.test.cli.aware.A" />
 
     <!-- @Autowired annotation 사용을 위한 A 클래스 bean 등록 -->
-    <bean class="kr.co.test.cli.annotation.B" />
+    <!--<bean class="kr.co.test.cli.annotation.B" />-->
+    <bean class="kr.co.test.cli.annotation.AppConfig" />
     <bean class="kr.co.test.cli.annotation.A" />
 
     <!--
