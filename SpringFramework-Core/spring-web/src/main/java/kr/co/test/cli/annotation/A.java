@@ -8,8 +8,7 @@ public class A {
     private B b;
 
     @Autowired
-    public A(B b) {
+    public void setB(B b) {
         this.b = b;
     }
-
 }
