@@ -133,7 +133,19 @@
   - JDBC의 `driverClass`, `url`, `user` 등
 - `@PropertySource`로  `properties` 파일을 읽어온 뒤 `@Value` annotation을 이용해 파일 안의 내용을 사용할 수 있다.
 - 사용 시, lombok의 `@Value`와 혼동하지 않도록 주의해야 한다.
-- `properties` 파일에 없는 Key를 사용하면 null이 아닌 문자열이 할당된다.
+- `properties` 파일에 없는 Key를 사용하면 null이 아닌 문자열이 할당된다.  
+
+<br>
+
+**`${}` vs `#{}`**
+
+- `${}`
+  - `@Value` annotation의 매개변수로서 `properties` 파일 내의 Key 값을 감싸는데 사용
+- `#{}`
+  - SpEL
+  - `@Value` 와 함께 사용되어 `systemProperties` 를 확인할 수 있음
+  - intellij에서 `Edit Configuration` 메뉴의 `VM options`에 값을 지정하여 `systemProperties` 를 수동으로 추가할 수 있다.
+    - `-Dhello=world` : `hello` 라는 Key에 `world` 라는 값을 갖는 시스템 변수 추가 
 
 <br>
 
@@ -149,3 +161,10 @@
 
   - `classpath`는 `main`인 경우에는 `java`와 `resources` 에 잡힌다.
 
+<br>
+
+### 7.2.9 `@PostConstruct` and `@PreDestroy`
+
+- JSR-250 Lifecycle과 관련된 annotation이다.
+- `@PostConstruct` : 생성자가 만들어진 이후에 동작
+- `@PreDestroy` : bean이 destroy되기 전에 동작
