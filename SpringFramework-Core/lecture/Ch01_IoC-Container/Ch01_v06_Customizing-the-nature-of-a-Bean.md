@@ -104,3 +104,13 @@
 - `ApplicationContext`가 만들어지면서 Bean Container가 잘 동작하면 `isRunning()` 메서드의 반환값은 `true`가 된다.
 - `context.close()` 를 통해서 Shutdown 되면서 `isRunning()` 메서드의 반환값이 `false`가 된다.
 - Spring Container가 살아 있는 지, 죽었는 지에 따라 조건적으로 설정을 구현하고 싶을 때 해당 메서드의 반환값을 활용할 수 있다.
+
+<br>
+
+### 1.6.2 `ApplicationContextAware` 와 `BeanNameAware`
+
+#### 1.6.2.1 `ApplicationContextAware`
+
+- `ClassPathXmlApplicationContext` 라는 Bean Container를 다른 Bean에서도 사용하고 싶을 때 사용할 수 있는 인터페이스
+- `setApplicationContext` 메서드를 overriding
+- `aware` 패키지의 소스 코드 참고
