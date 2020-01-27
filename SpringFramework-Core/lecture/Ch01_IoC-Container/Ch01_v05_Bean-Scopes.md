@@ -63,5 +63,12 @@
     </plugin>
     ```
 
+- `equals()`, `hashCode()` 메서드를 overriding 하여 동등성을 확인할 수 있다.
+  (`@EqualsAndHashCode` lombok 으로 대체 가능)
+
+<br>
+
+### 1.5.3 Scope의 동일성과 동질성
+
 
 
