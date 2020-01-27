@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.Map;
 
 @Slf4j
 public class A {
@@ -16,6 +17,9 @@ public class A {
     @Autowired private ApplicationContext context;
     @Value("${catalog.name}") String catalogName;
     @Value("${catalog.name.unknown}") String catalogNameUnknown;
+    @Value("#{systemProperties}") Map properties;
+    @Value("#{systemProperties['java.home']}") String property;
+    @Value("#{systemProperties['hello']}") String property2;
 
     @PostConstruct
     void init() {
