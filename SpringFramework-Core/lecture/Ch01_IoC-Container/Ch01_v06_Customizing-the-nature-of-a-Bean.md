@@ -88,3 +88,19 @@
 - 매번 bean들에다가 `init-method` 또는 `destroy-method`를 매번 정의해주기 귀찮을 때는 `<beans>` 의 속성에다가 `default-init-method="init 메서드명"`, `default-destroy-method="destroy 메서드명"` 을 지정하면 모든 `<bean>` 의 생성 및 종료 시 마다 init method와 destroy method를 실행시켜준다.
 - 소스 코드 참고
 - bean과 bean 간의 의존성 설정과 bean들 사이에 만들어지는 순서 설정에도 해당 기능이 영향을 미치게 된다.
+
+<br>
+
+#### 1.6.1.6 Startup and Shutdown Callbacks
+
+- Startup 할 때와 Shutdown 할 때 동작할 수 있는 Callbacks
+- `Lifecycle` 인터페이스를 사용하여 구현
+- `Lifecycle`은 `ApplicationContext` bean을 만들 때 spring이 자동으로 만들어 준다.
+
+<br>
+
+**1) `Lifecycle` 인터페이스의 `isRunning()` 메서드**
+
+- `ApplicationContext`가 만들어지면서 Bean Container가 잘 동작하면 `isRunning()` 메서드의 반환값은 `true`가 된다.
+- `context.close()` 를 통해서 Shutdown 되면서 `isRunning()` 메서드의 반환값이 `false`가 된다.
+- Spring Container가 살아 있는 지, 죽었는 지에 따라 조건적으로 설정을 구현하고 싶을 때 해당 메서드의 반환값을 활용할 수 있다.
