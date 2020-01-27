@@ -4,6 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="A" class="kr.co.test.cli.scope.A"></bean>
+    <bean id="A" class="kr.co.test.cli.scope.A" scope="prototype"></bean>
 
 </beans>

@@ -21,6 +21,6 @@ public class Main {
         A a1 = context.getBean("A", A.class);
         A a2 = context.getBean("A", A.class);
 
-        log.info("result : " + (a1 == a2)); // true (동일성 확인)
+        log.info("result : " + (a1 == a2)); // false (bean의 scope가 prototype으로 지정되었기 때문)
     }
 }
