@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 
 @Slf4j
 public class A {
-    @Autowired @Qualifier("b2") private B b;
+    //@Autowired @Qualifier("b2") private B b;
+    @Resource(name = "appBeanB1") private B b;
     @Autowired private ApplicationContext context;
 
     @PostConstruct

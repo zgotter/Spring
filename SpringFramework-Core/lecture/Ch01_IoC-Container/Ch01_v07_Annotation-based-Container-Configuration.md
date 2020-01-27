@@ -74,6 +74,10 @@
 - 관계를 연결시켜주는 방법
   - bean의 이름(`name`)을 사용
   - bean의 유형(`type`)을 사용
+- 다음 3가지 level에서 해당 annotation 사용 가능
+  - 생성자 (Constructor)
+  - Setter 메서드
+  - Field
 - `annotation` 패키지 하위의 소스 코드 참고
 
 <br>
@@ -104,4 +108,16 @@
 
 - 같은 타입의 bean을 만들 때 XML 방식에서 bean의 속성으로 `qualifier` 를 지정할 수 있다.
 - `@Qualifier` annotation의 매개변수로 관계를 설정할 bean의 XML 설정 중 `qualifier` 의 `value`로 지정된 `id` 값을 넣어주게 되면 같은 타입의 bean들 중에 `id`가 일치하는 bean을 선택하여 관계를 설정하게 된다.
-- 
+
+<br>
+
+### 7.2.6 `@Resource`
+
+- JSR-250에 있는 annotation (`javax.annotation.Resource`)
+- `@Resource` 를 통해서도 `@Autowired`와 똑같은 효과를 볼 수 있다.
+- `@Bean` annotation을 통해 bean을 생성하게 되면 Java 코드에서 함수의 이름이 bean의 이름(`name`)으로 지정된다.
+
+- 다음 3가지 level에서 해당 annotation 사용 가능
+  - 생성자 (Constructor)
+  - Setter 메서드
+  - Field
