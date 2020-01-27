@@ -70,5 +70,24 @@
 
 ### 1.5.3 Scope의 동일성과 동질성
 
+- bean의 default scope은 `singleton`이다. (동일성 보장)
+- spring에서 객체를 가져오고 싶을 때 각각 다른 객체가 생성되고 싶은 경우에는 scope를 `prototype`으로 지정하면 된다.
 
+<br>
 
+### 1.5.4 Singleton Scope
+
+![singleton scope](<https://docs.spring.io/spring/docs/5.2.3.RELEASE/spring-framework-reference/images/singleton.png>)
+
+ <br>
+
+### 1.5.5 Prototype Scope
+
+![prototype scope](https://docs.spring.io/spring/docs/5.2.3.RELEASE/spring-framework-reference/images/prototype.png)
+
+<br>
+
+### 1.5.6 Singleton Beans with Prototype-bean Dependencies
+
+- bean들이 의존성을 가지고 있을 때 prototype으로 만든 bean들을 가지고 의존성을 주입시키면 관리가 힘들어진다.
+- 그러므로 설정 시 singleton인 bean을 많이 사용하게 된다.
