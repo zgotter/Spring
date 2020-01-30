@@ -12,7 +12,7 @@ public class AppConfig {
         return new B();
     }
 
-    @Bean
+    @Bean(initMethod = "init", destroyMethod = "destroy")
     public A a(B b) { // 의존성 주입
         return new A(b);
     }

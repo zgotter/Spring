@@ -10,11 +10,13 @@
     <context:annotation-config/> <!-- annotation 방식으로 spring 설정 가능 -->
     <context:component-scan base-package="kr.co.test.cli.annotation" />
 
+    <context:property-placeholder location="classpath:application.properties"/>
+
     <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
-        <constructor-arg name="driverClass" value="org.h2.Driver" />
-        <constructor-arg name="url" value="jdbc:h2:mem:test" />
-        <constructor-arg name="user" value="sa" />
-        <constructor-arg name="password" value="" />
+        <constructor-arg name="driverClass" value="${jdbc.driver-class}" />
+        <constructor-arg name="url" value="${jdbc.url}" />
+        <constructor-arg name="user" value="${jdbc.username}" />
+        <constructor-arg name="password" value="${jdbc.password}" />
     </bean>
 
     <!-- Connection 객체 의존성 주입 -->

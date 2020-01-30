@@ -10,7 +10,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Slf4j
-@Component
 public class A {
     private B b;
 
@@ -18,12 +17,10 @@ public class A {
         this.b = b;
     }
 
-    @PostConstruct
     void init() {
         log.info("A post construct : " + b); // b가 null 인지 아닌 지 체크
     }
 
-    @PreDestroy
     void destroy() {
         log.error("A pre destroy");
     }

@@ -2,7 +2,6 @@ package kr.co.test.cli;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.Lifecycle;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
@@ -12,10 +11,9 @@ class Main {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         log.info("Hello World!");
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("_dao.xml");
-        Lifecycle lifecycle = context.getBean(Lifecycle.class);
-        log.info(">> 1:" + lifecycle.isRunning()); // true
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
+        Dao dao = context.getBean(Dao.class);
+        dao.run();
         context.close();
-        log.info(">> 2:" + lifecycle.isRunning()); // false
     }
 }

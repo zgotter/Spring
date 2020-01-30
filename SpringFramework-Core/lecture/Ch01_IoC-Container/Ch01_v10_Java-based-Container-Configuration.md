@@ -161,4 +161,217 @@
   }
   ```
 
+<br>
+
+### 10.3.3 Receiving Lifecycle Callbacks
+
+- `@Bean` annotation에는 `initMethod` 또는 `destroyMethod`를 넣어줄 수 있다.
+
+  ```java
+  public class BeanOne {
   
+      public void init() {
+          // initialization logic
+      }
+  }
+  
+  public class BeanTwo {
+  
+      public void cleanup() {
+          // destruction logic
+      }
+  }
+  
+  @Configuration
+  public class AppConfig {
+  
+      @Bean(initMethod = "init") // initMethod 사용
+      public BeanOne beanOne() {
+          return new BeanOne();
+      }
+  
+      @Bean(destroyMethod = "cleanup") // destroyMethod 사용
+      public BeanTwo beanTwo() {
+          return new BeanTwo();
+      }
+  }
+  ```
+
+- `@PostConstructor`와 `@PreDestroy` annotation을 사용하는 것보다 `@Bean`의 `initMethod`와 `destroyMethod`를 사용하는 것이 선호된다.
+
+  - destroy 할 메서드 위에 `@PreDestroy` annotation을 지정하게 되면 해당 클래스의 설정 값이 들어가게 된다.
+  - 가능하다면 특정 클래스에는 그 클래스에서 필요한 정보만 넣고 설정 값들은 외부에서 관리하는 것이 효율적이다.
+
+- 또한, XML보다 `@Configuration`, `@Bean` annotation을 사용하여 환경 설정을 하는 것이 선호된다.
+
+- 이를 통해 환경 설정에 사용되는 자바 클래스와 비즈니스 로직 구현에 사용되는 자바 클래스를 구분할 수 있다.
+
+<br>
+
+### 10.3.4 Using the `@Scope` Annotation
+
+- `@Scope` annotation의 사용
+
+  ```java
+  @Configuration
+  public class MyConfiguration {
+  
+      @Bean
+      @Scope("prototype")
+      public Encryptor encryptor() {
+          // ...
+      }
+  }
+  ```
+
+<br>
+
+### 10.3.5 Customizing Bean Naming
+
+- 메서드명은 Bean의 `name`  속성 값으로 지정된다.
+
+- `@Bean` annotation에서 다음과 같이 `name` 을 지정할 수 있다.
+
+  - 해당 bean의 `name`을 `myThing`으로 지정
+
+  ```java
+  @Configuration
+  public class AppConfig {
+  
+      @Bean(name = "myThing")
+      public Thing thing() {
+          return new Thing();
+      }
+  }
+  ```
+
+<br>
+
+### 10.3.6 Bean Aliasing
+
+- 다음과 같이 배열로 값을 넣어서 `name`에 여러 개의 값을 지정할 수 있다.
+
+  ```java
+  @Configuration
+  public class AppConfig {
+  
+      @Bean({"dataSource", "subsystemA-dataSource", "subsystemB-dataSource"})
+      public DataSource dataSource() {
+          // instantiate, configure and return DataSource bean...
+      }
+  }
+  ```
+
+<br>
+
+### 10.3.7  Bean Description
+
+- `@Bean` annotation 다음에 `@Description` annotation을 지정하여 해당 Bean에 대한 설명 내용을 기술할 수 있다.
+
+- Spring보다는 사람이 보기 편하기 위해서 해당 Bean의 설명 내용을 적는다.
+
+  ```java
+  @Configuration
+  public class AppConfig {
+  
+      @Bean
+      @Description("Provides a basic example of a bean")
+      public Thing thing() {
+          return new Thing();
+      }
+  }
+  ```
+
+<br>
+
+## 10.4 Composing Java-based Configurationos
+
+- Java-based Configurations 조합
+
+- 먼저 `@Configuration` 를 설정하여 `ConfigA` 클래스를 만든다.
+
+- 설정한 Configuration을 `@Import(ConfigA.class)`를 이용해 불러올 수 있다.
+
+- `@ComponentScan`을 하면 굳이 Import 할 필요는 없기는 하다.
+
+- 테스트 코드를 만들 때 `@Import`를 이용해 외부 클래스를 가져오곤 한다.
+
+  ```java
+  @Configuration
+  public class ConfigA {
+  
+      @Bean
+      public A a() {
+          return new A();
+      }
+  }
+  
+  @Configuration
+  @Import(ConfigA.class)
+  public class ConfigB {
+  
+      @Bean
+      public B b() {
+          return new B();
+      }
+  }
+  ```
+
+  ```java
+  public static void main(String[] args) {
+      ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigB.class);
+  
+      // now both beans A and B will be available...
+      A a = ctx.getBean(A.class);
+      B b = ctx.getBean(B.class);
+  }
+  ```
+
+<br>
+
+### 10.4.1 Conditionally Include `@Configuration` Classes or `@Bean` Methods
+
+- 조건절을 통해서 `@Configuration`을 설정한 클래스나 `@Bean`을 설정한 메서드를 가져올 수 있다.
+
+  ```java
+  @Override
+  public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
+      // Read the @Profile annotation attributes
+      MultiValueMap<String, Object> attrs = metadata.getAllAnnotationAttributes(Profile.class.getName());
+      if (attrs != null) {
+          for (Object value : attrs.get("value")) {
+              if (context.getEnvironment().acceptsProfiles(((String[]) value))) {
+                  return true;
+              }
+          }
+          return false;
+      }
+      return true;
+  }
+  ```
+
+- SpringBoot에서는 `@Conditional` annotation을 통해서 많은 설정을 하고 있다.
+
+<br>
+
+ ### 10.4.2 XML-centric Use of `@Configuration` Classes
+
+- XML 중심의 `@Configuration` 클래스 사용
+
+  ```java
+  <beans>
+      <!-- enable processing of annotations such as @Autowired and @Configuration -->
+      <context:annotation-config/>
+      <context:property-placeholder location="classpath:/com/acme/jdbc.properties"/>
+  
+      <bean class="com.acme.AppConfig"/>
+  
+      <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+          <property name="url" value="${jdbc.url}"/>
+          <property name="username" value="${jdbc.username}"/>
+          <property name="password" value="${jdbc.password}"/>
+      </bean>
+  </beans>
+  ```
+
+- 위와 같이 XML에서 `<context:property-placeholder>`에서 특정 classpath값을 이용해서 `properties` 값을 가져올 수 있다.
