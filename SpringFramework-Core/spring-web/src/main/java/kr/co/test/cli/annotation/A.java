@@ -9,12 +9,14 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 @Slf4j
-@Component // Scanning 할 대상이라고 지정 (bean이 등록될 수 있도록)
+@Named("a")
 public class A {
-    @Autowired private B b;
-    @Autowired private ApplicationContext context;
+    @Inject private B b;
+    @Inject private ApplicationContext context;
     @Value("#{systemProperties['hello']}") String property2;
 
     @PostConstruct
