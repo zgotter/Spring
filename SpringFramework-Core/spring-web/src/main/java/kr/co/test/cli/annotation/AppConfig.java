@@ -11,4 +11,9 @@ public class AppConfig {
     public B b() {
         return new B();
     }
+
+    @Bean
+    public A a(B b) { // 의존성 주입
+        return new A(b);
+    }
 }

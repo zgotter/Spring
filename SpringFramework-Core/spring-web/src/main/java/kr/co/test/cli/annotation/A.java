@@ -12,13 +12,15 @@ import javax.annotation.PreDestroy;
 @Slf4j
 @Component
 public class A {
-    @Autowired private B b;
-    @Autowired private ApplicationContext context;
-    @Value("#{systemProperties['hello']}") String property2;
+    private B b;
+
+    public A(B b) {
+        this.b = b;
+    }
 
     @PostConstruct
     void init() {
-        log.info("A post construct");
+        log.info("A post construct : " + b); // b가 null 인지 아닌 지 체크
     }
 
     @PreDestroy
