@@ -1,0 +1,5 @@
+#
+#Thu Jan 30 21:26:27 KST 2020
+kr.co.test.cli.annotation.Main=org.springframework.stereotype.Component
+kr.co.test.cli.annotation.B=org.springframework.stereotype.Component
+kr.co.test.cli.annotation.A=org.springframework.stereotype.Component
