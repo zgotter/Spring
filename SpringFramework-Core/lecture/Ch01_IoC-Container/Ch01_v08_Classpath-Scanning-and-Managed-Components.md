@@ -56,7 +56,7 @@
 
 ## 8.3 Automatically Detecting Classes and Registering Bean Definitions
 
-### 8.3.1 `@Component` annotation을 통한 bean 등록
+### 8.3.1 `@Component` annotation을 이용한 classpath scanning bean 등록
 
 ```java
 @Service
@@ -93,5 +93,13 @@ public class AppConfig  {
 
 <br>
 
+### 8.3.2 XML을 이용한 classpath scanning bean 등록
 
+- XML에 아래 내용을 등록해줘야 사용할 수 있다.
+
+  ```xml
+  <context:component-scan base-package="org.example"/>
+  ```
+
+  
 

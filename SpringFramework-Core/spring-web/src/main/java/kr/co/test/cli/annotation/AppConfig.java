@@ -9,7 +9,7 @@ import org.springframework.context.annotation.*;
     - @Configuration annotation 또한 내부적으로 @Component 를 가지고 있다.
  */
 @Configuration
-@ComponentScan(basePackages = "kr.co.test.cli.annotation")
+//@ComponentScan(basePackages = "kr.co.test.cli.annotation")
 public class AppConfig {
 
 }

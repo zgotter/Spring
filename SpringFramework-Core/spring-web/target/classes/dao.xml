@@ -8,6 +8,7 @@
         https://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config/> <!-- annotation 방식으로 spring 설정 가능 -->
+    <context:component-scan base-package="kr.co.test.cli.annotation" />
 
     <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
         <constructor-arg name="driverClass" value="org.h2.Driver" />
