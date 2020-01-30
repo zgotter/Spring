@@ -60,5 +60,27 @@
   }
   ```
 
+<br>
+
+### 10.2.2 `scan(String..)`
+
+- `scan()` 메서드를 활용한 Component Scaning 사용
+
+  ```java
+  @Configuration
+  @ComponentScan(basePackages = "com.acme") 
+  public class AppConfig  {
+      ...
+  }
+  ```
+
+- XML 설정에 아래 내용을 추가해야 사용할 수 있다.
+
+  ```xml
+  <beans>
+      <context:component-scan base-package="com.acme"/>
+  </beans>
+  ```
+
   
 

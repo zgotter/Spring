@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         log.info("Hello World");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.register(AppConfig.class);
+        context.scan("kr.co.test.cli.annotation");
         context.refresh();
         B b = context.getBean(B.class);
         log.info("" + b);
