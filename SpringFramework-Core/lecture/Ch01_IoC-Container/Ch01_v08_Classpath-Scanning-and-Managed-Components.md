@@ -109,3 +109,20 @@ public class AppConfig  {
 - `AnnotationConfigApplicationContext` 의 매개변수로 basePackages 경로 입력
 
 <br>
+
+## 8.4 Using Filters to Customize Scanning
+
+### 8.4.1 필터의 종류
+
+1. `includeFilters`
+2. `excludeFilters`
+
+<br>
+
+### 8.4.2 필터의 타입
+
+1. annotation (default)
+2. assignable
+3. aspectj
+4. regex (많이 사용됨)
+5. custom

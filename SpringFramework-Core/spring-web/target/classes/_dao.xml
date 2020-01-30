@@ -40,6 +40,6 @@
         <qualifier value="b2" />
     </bean>
     -->
-    <bean class="kr.co.test.cli.annotation.AppConfig" /> <!-- @ComponentScan annotation을 인식시키기 위해 Appconfig는 XML에 bean 설정이 되있어야 한다. -->
+    <!--<bean class="kr.co.test.cli.annotation.AppConfig" /> -->
 
 </beans>
