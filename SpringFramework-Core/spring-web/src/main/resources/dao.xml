@@ -39,12 +39,6 @@
         <qualifier value="b2" />
     </bean>
     -->
-    <bean class="kr.co.test.cli.annotation.AppConfig" />
-    <bean class="kr.co.test.cli.annotation.A" />
-
-    <!--
-        XML에서는 A 클래스와 B 클래스 사이의 관계를 따로 지정하지 않는다.
-        -> 클래스 내부의 소스코드에서 @Autowired annotation을 사용하여 관계 설정
-    -->
+    <bean class="kr.co.test.cli.annotation.AppConfig" /> <!-- @ComponentScan annotation을 인식시키기 위해 Appconfig는 XML에 bean 설정이 되있어야 한다. -->
 
 </beans>

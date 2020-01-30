@@ -1,26 +1,15 @@
 package kr.co.test.cli.annotation;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 
-@Configuration // Spring 설정과 관련된 bean이라고 알려주는 annotation
-@PropertySource("classpath:application.properties")
+/*
+    - @ComponentScan annotation 을 이용해 현재 경로의 패키지명을 basePackages로 등록
+    - 그러면 해당 패키지 하위로 annotation component 또는 @Configuration이 붙은 annotation config를 가지고 Spring 설정을 할 수 있다.
+    - @Configuration annotation 또한 내부적으로 @Component 를 가지고 있다.
+ */
+@Configuration
+@ComponentScan(basePackages = "kr.co.test.cli.annotation")
 public class AppConfig {
-
-    @Bean // XML에서 Bean을 설정하는 것 대신 Java annotation을 통해 bean을 설정할 수 있게 해주는 annotation
-    @Qualifier("b1")
-    public B appBeanB1() {
-        return new B(); // B type의 bean 추가
-    }
-
-    @Bean
-    @Qualifier("b2")
-    public B appBeanB2() {
-        return new B();
-    }
 
 }

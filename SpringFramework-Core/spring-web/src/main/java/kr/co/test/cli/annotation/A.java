@@ -2,24 +2,19 @@ package kr.co.test.cli.annotation;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
-import java.util.Map;
 
 @Slf4j
+@Component // Scanning 할 대상이라고 지정 (bean이 등록될 수 있도록)
 public class A {
-    //@Autowired @Qualifier("b2") private B b;
-    @Resource(name = "appBeanB1") private B b;
+    @Resource private B b;
     @Autowired private ApplicationContext context;
-    @Value("${catalog.name}") String catalogName;
-    @Value("${catalog.name.unknown}") String catalogNameUnknown;
-    @Value("#{systemProperties}") Map properties;
-    @Value("#{systemProperties['java.home']}") String property;
     @Value("#{systemProperties['hello']}") String property2;
 
     @PostConstruct
