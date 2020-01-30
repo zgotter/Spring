@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         /*
-        ApplicationContext context = new ClassPathXmlApplicationContext("dao.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("_dao.xml");
         A a = context.getBean("a", A.class);
         a.print();
         */

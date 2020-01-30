@@ -101,5 +101,11 @@ public class AppConfig  {
   <context:component-scan base-package="org.example"/>
   ```
 
-  
+<br>
 
+### 8.3.3 XML을 전혀 사용하지 않는 classpath scanning bean 등록
+
+- Main에서 `ClassPathXmlApplicationContext` 대신 `AnnotationConfigApplicationContext`를 사용
+- `AnnotationConfigApplicationContext` 의 매개변수로 basePackages 경로 입력
+
+<br>
