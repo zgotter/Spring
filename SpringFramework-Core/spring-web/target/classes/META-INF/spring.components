@@ -1,5 +1,4 @@
 #
-#Thu Jan 30 21:50:36 KST 2020
-kr.co.test.cli.annotation.Main=org.springframework.stereotype.Component
-kr.co.test.cli.annotation.B=javax.inject.Named
-kr.co.test.cli.annotation.A=javax.inject.Named
+#Thu Jan 30 22:09:03 KST 2020
+kr.co.test.cli.annotation.AppConfig=org.springframework.stereotype.Component
+kr.co.test.cli.annotation.A=org.springframework.stereotype.Component
