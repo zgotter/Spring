@@ -210,6 +210,8 @@ public class DefaultDataConfig {
 
 ### 11.1.10 Profile 실습
 
+**방법 1 : XML 설정**
+
 - XML 파일에 2개의 프로필(default, dev) 생성
 
 - 인텔리제이에서 실행 시 "Run/Debug Configurations" 에서 "VM options" 부분에 실행하고자 하는 프로필에 맞는 명령어 입력
@@ -226,7 +228,11 @@ public class DefaultDataConfig {
     -Dspring.profiles.active=dev
     ```
 
-- 또는 Main에 아래 내용을 추가하여 실행하고자 하는 프로필을 설정할 수 있다.
+<br>
+
+**방법 2 : `getEnvironment().setAcitveProfiles()` 사용**
+
+- Main에 아래 내용을 추가하여 실행하고자 하는 프로필을 설정할 수 있다.
 
   - default 프로필 실행 시
 

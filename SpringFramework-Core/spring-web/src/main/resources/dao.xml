@@ -1,3 +1,5 @@
+<!--
+
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,16 +9,16 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/> <!-- annotation 방식으로 spring 설정 가능 -->
+    <context:annotation-config/> &lt;!&ndash; annotation 방식으로 spring 설정 가능 &ndash;&gt;
     <context:component-scan base-package="kr.co.test.cli.annotation" />
 
     <context:property-placeholder location="classpath:application.properties"/>
 
-    <!--
+    &lt;!&ndash;
         Profile 설정
           - 테스트(default) : h2 memory 사용
           - 개발(dev) : h2 file 사용
-     -->
+     &ndash;&gt;
     <beans profile="default">
         <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
             <constructor-arg name="driverClass" value="org.h2.Driver" />
@@ -51,3 +53,4 @@
         <bean class="kr.co.test.cli.annotation.AppConfig" />
     </beans>
 </beans>
+-->

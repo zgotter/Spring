@@ -1,16 +1,17 @@
-package kr.co.test.cli.annotation;
+package kr.co.test.cli;
 
-import kr.co.test.cli.ConnectionFactory;
-import kr.co.test.cli.Dao;
+import kr.co.test.cli.annotation.A;
+import kr.co.test.cli.annotation.B;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import java.sql.Connection;
 
 @Configuration
-@ComponentScan(basePackageClasses = AppConfig.class)
-public class AppConfig {
+@Profile("default")
+public class AppDefaultConfig {
     @Bean
     public B b() {
         return new B();
