@@ -18,12 +18,15 @@ public class MyService {
     private Validator validator;
 
     public void check() {
-        PersonForm personForm = new PersonForm("shkim", 10);
+        PersonForm personForm = new PersonForm("shkim", -1);
         Set<ConstraintViolation<PersonForm>> results = validator.validate(personForm);
         if (results.isEmpty()) { // validate 성공
             log.info("validate success");
         } else {
             log.error("validate fail");
+            results.forEach(x -> {
+                log.error(">> error message: " + x.getMessage());
+            });
         }
     }
 
