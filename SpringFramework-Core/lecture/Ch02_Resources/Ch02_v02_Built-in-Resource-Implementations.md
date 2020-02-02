@@ -26,6 +26,8 @@
 ## 2.2 `FileSystemResource`
 
 - ClassLoader를 통해서 프로젝트에 있는 파일들을 `classpath`를 기준으로 파일의 경로를 읽어들이는 방식
+- `java.io.File`과 `java.nio.file.Path`핸들을 구현했다.
+- 그러므로 `File`과 `URL`에 대해 지원할 수 있다.
 - 거의 사용하지 않는다.
 
 <br>
@@ -53,3 +55,9 @@
 ## 2.6 `ClassPathResource`
 
 - 코딩을 통해 실습
+
+<br>
+
+## 2.7 `Resource` 인터페이스를 사용하는 이유
+
+- `UrlResource`, `FileSystemResource`, `ClassPathResource` 등이 하나의 `Resource` 인터페이스를 구현하였기 때문에 동일한 메서드를 사용하여 일관된 프로그래밍을 할 수 있다.
