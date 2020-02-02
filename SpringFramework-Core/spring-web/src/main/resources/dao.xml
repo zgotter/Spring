@@ -12,36 +12,42 @@
 
     <context:property-placeholder location="classpath:application.properties"/>
 
-    <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
-        <constructor-arg name="driverClass" value="${jdbc.driver-class}" />
-        <constructor-arg name="url" value="${jdbc.url}" />
-        <constructor-arg name="user" value="${jdbc.username}" />
-        <constructor-arg name="password" value="${jdbc.password}" />
-    </bean>
-
-    <!-- Connection 객체 의존성 주입 -->
-    <bean id="connection" class="java.sql.Connection"
-          factory-bean="connectionFactory"
-          factory-method="createConnection" />
-
-    <bean id="dao" class="kr.co.test.cli.Dao">
-        <constructor-arg ref="connection"/>
-    </bean>
-
-    <bean id="dao2" class="kr.co.test.cli.Dao2">
-        <constructor-arg ref="connection"/>
-    </bean>
-
-    <!-- ApplicationContextAware 인터페이스를 구현한 A 클래스 bean 등록 -->
-    <bean class="kr.co.test.cli.aware.A" />
     <!--
-    <bean class="kr.co.test.cli.annotation.B">
-        <qualifier value="b1" />
-    </bean>
-    <bean class="kr.co.test.cli.annotation.B">
-        <qualifier value="b2" />
-    </bean>
-    -->
-    <!--<bean class="kr.co.test.cli.annotation.AppConfig" /> -->
+        Profile 설정
+          - 테스트(default) : h2 memory 사용
+          - 개발(dev) : h2 file 사용
+     -->
+    <beans profile="default">
+        <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
+            <constructor-arg name="driverClass" value="org.h2.Driver" />
+            <constructor-arg name="url" value="jdbc:h2:mem:test" />
+            <constructor-arg name="user" value="sa" />
+            <constructor-arg name="password" value="" />
+        </bean>
+        <bean id="connection" class="java.sql.Connection"
+              factory-bean="connectionFactory"
+              factory-method="createConnection" />
 
+        <bean id="dao" class="kr.co.test.cli.Dao">
+            <constructor-arg ref="connection"/>
+        </bean>
+        <bean class="kr.co.test.cli.annotation.AppConfig" />
+    </beans>
+
+    <beans profile="dev">
+        <bean id="connectionFactory" class="kr.co.test.cli.ConnectionFactory">
+            <constructor-arg name="driverClass" value="org.h2.Driver" />
+            <constructor-arg name="url" value="jdbc:h2:file:~/test" />
+            <constructor-arg name="user" value="sa" />
+            <constructor-arg name="password" value="" />
+        </bean>
+        <bean id="connection" class="java.sql.Connection"
+              factory-bean="connectionFactory"
+              factory-method="createConnection" />
+
+        <bean id="dao" class="kr.co.test.cli.Dao">
+            <constructor-arg ref="connection"/>
+        </bean>
+        <bean class="kr.co.test.cli.annotation.AppConfig" />
+    </beans>
 </beans>

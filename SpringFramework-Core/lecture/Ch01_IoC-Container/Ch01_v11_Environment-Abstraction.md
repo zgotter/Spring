@@ -155,3 +155,89 @@ public DataSource dataSource() throws Exception {
 
 ### 11.1.8 Activating a Profile
 
+**방법 1**
+
+-  `getEnvironment()`와 `setActiveProfiles()` 메서드 이용
+
+  ```java
+  AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+  ctx.getEnvironment().setActiveProfiles("development");
+  ctx.register(SomeConfig.class, StandaloneDataConfig.class, JndiDataConfig.class);
+  ctx.refresh();
+  ```
+
+<br>
+
+**방법 2**
+
+- `spring.profiles.active` 라는 property 사용
+
+  ```java
+  -Dspring.profiles.active="profile1,profile2"
+  ```
+
+<br>
+**방법 3**
+
+- `@ActiveProfiles` annotation 사용
+- 테스트 코드를 작성할 때 주로 사용한다.
+
+<br>
+
+- 주로 방법 2 를 많이 사용한다.
+  - JVM을 띄울 때 이 값을 넣어주기 편하기 때문
+
+<br>
+
+### 11.1.9 Default Profile
+
+```java
+@Configuration
+@Profile("default")
+public class DefaultDataConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        return new EmbeddedDatabaseBuilder()
+            .setType(EmbeddedDatabaseType.HSQL)
+            .addScript("classpath:com/bank/config/sql/schema.sql")
+            .build();
+    }
+}
+```
+
+<br>
+
+### 11.1.10 Profile 실습
+
+- XML 파일에 2개의 프로필(default, dev) 생성
+
+- 인텔리제이에서 실행 시 "Run/Debug Configurations" 에서 "VM options" 부분에 실행하고자 하는 프로필에 맞는 명령어 입력
+
+  - default 프로필 실행 시
+
+    ```
+    -Dspring.profiles.active=default
+    ```
+
+  - dev 프로필 실행 시
+
+    ```
+    -Dspring.profiles.active=dev
+    ```
+
+- 또는 Main에 아래 내용을 추가하여 실행하고자 하는 프로필을 설정할 수 있다.
+
+  - default 프로필 실행 시
+
+    ```java
+    context.getEnvironment().setActiveProfiles("default");
+    ```
+
+  - dev 프로필 실행 시
+
+    ```java
+    context.getEnvironment().setActiveProfiles("dev");
+    ```
+
+    
