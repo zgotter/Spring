@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
+import java.util.Locale;
 import java.util.Set;
 
 
@@ -18,6 +19,7 @@ public class MyService {
     private Validator validator;
 
     public void check() {
+        Locale.setDefault(Locale.ENGLISH); // locale 설정을 영어로 바꾸면 에러 메세지가 영문으로 출력된다.
         PersonForm personForm = new PersonForm("  ", 120);
         Set<ConstraintViolation<PersonForm>> results = validator.validate(personForm);
         if (results.isEmpty()) { // validate 성공
