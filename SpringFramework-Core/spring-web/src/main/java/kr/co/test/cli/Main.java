@@ -13,7 +13,7 @@ class Main {
      public static void main(String[] args) throws ClassNotFoundException, SQLException {
         log.info("Hello World!");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.register(AppDefaultConfig.class, AppDevConfig.class);
+        context.register(AppConfig.class, AppDefaultConfig.class, AppDevConfig.class);
         context.refresh();
         Dao dao = context.getBean(Dao.class);
         dao.run();
