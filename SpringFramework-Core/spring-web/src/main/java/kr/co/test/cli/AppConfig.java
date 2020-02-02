@@ -9,7 +9,8 @@ import org.springframework.context.annotation.Profile;
 import java.sql.Connection;
 
 @Configuration
-@Profile("default | dev")
+//@Profile("default | dev")
+@Profile({"default", "dev"})
 public class AppConfig {
     @Bean
     public B b() {

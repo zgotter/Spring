@@ -1,16 +1,14 @@
 package kr.co.test.cli;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
 
 @Slf4j
 class Main {
 
-     public static void main(String[] args) throws ClassNotFoundException, SQLException {
+     public static void main(String[] args) throws SQLException {
         log.info("Hello World!");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(AppConfig.class, AppDefaultConfig.class, AppDevConfig.class);
