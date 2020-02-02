@@ -18,7 +18,7 @@ public class MyService {
     private Validator validator;
 
     public void check() {
-        PersonForm personForm = new PersonForm("shkim", -1);
+        PersonForm personForm = new PersonForm("  ", 120);
         Set<ConstraintViolation<PersonForm>> results = validator.validate(personForm);
         if (results.isEmpty()) { // validate 성공
             log.info("validate success");
