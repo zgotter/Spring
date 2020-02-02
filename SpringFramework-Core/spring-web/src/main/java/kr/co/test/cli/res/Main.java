@@ -1,5 +1,6 @@
 package kr.co.test.cli.res;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 
@@ -7,10 +8,11 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext();
-        Resource resource = context.getResource("http://spring.io/img/homepage/icon-spring-cloud.svg");
-        String daoStr = new String(resource.getInputStream().readAllBytes());
-        System.out.println(daoStr);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(ResourceExample.class);
+        context.refresh();
+        ResourceExample re = context.getBean(ResourceExample.class);
+        re.print();
         context.close();
     }
 }
