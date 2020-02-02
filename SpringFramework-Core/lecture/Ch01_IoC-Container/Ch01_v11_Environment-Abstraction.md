@@ -246,4 +246,55 @@ public class DefaultDataConfig {
     context.getEnvironment().setActiveProfiles("dev");
     ```
 
-    
+<br>
+
+**방법 3 : `@Profile` annotation 사용**
+
+- 기본적으로는 `@Profile("default")`로 설정된 프로필이 실행된다.
+
+<br>
+
+## 11.2 `PropertySource` Abstraction
+
+- Property 정보를 아래와 같은 방법으로 넣어줄 수 있다.
+  1. ServletConfig parameters
+     - if applicable - for example, in case of a `DispatcherServlet` context
+  2. ServletContext parameters
+     - `web.xml` context-param entries
+  3. JNDI environment variables
+     - `java:comp/env/` entries
+  4. JVM system properties
+     - `-D` command-line arguements
+  5. JVM system environment
+     - operating system environment variables
+
+<br>
+
+### 11.2.1 Using `@PropertySource`
+
+- `@PropertySource` annotation을 이용하여 특정 Property를 읽을 수 있다.
+
+<br>
+
+### 11.2.2 `@PropertySource` 변수화
+
+- `@PropertySource` 를 변수화할 수 있다.
+
+  ```java
+  @Configuration
+  @PropertySource("classpath:/com/${my.placeholder:default/path}/app.properties")
+  public class AppConfig {
+  
+      @Autowired
+      Environment env;
+  
+      @Bean
+      public TestBean testBean() {
+          TestBean testBean = new TestBean();
+          testBean.setName(env.getProperty("testbean.name"));
+          return testBean;
+      }
+  }
+  ```
+
+  
