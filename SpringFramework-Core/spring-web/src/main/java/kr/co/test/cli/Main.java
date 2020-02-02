@@ -1,5 +1,6 @@
 package kr.co.test.cli;
 
+import kr.co.test.cli.service.MyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,8 +14,8 @@ class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(AppConfig.class);
         context.refresh();
-        Dao dao = context.getBean(Dao.class);
-        dao.run();
+         MyService service = context.getBean(MyService.class);
+        service.check();
         context.close();
     }
 }
