@@ -30,6 +30,30 @@
 
 <br>
 
+- 의존성(dependency) 추가
+
+  - [maven central - aspepctjrt](https://search.maven.org/artifact/org.aspectj/aspectjrt/1.9.4/jar)
+
+    ```xml
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>1.9.4</version>
+    </dependency>
+    ```
+
+  - [maven central - aspectjweaver](https://search.maven.org/artifact/org.aspectj/aspectjweaver/1.9.4/jar)
+
+    ```xml
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.4</version>
+    </dependency>
+    ```
+
+<br>
+
 ## 4.2 Declaring an Aspect
 
 - Aspect 선언
@@ -76,3 +100,58 @@
   - `*` : 모든 메서드
   - `(..)` : 모든 Argument
 
+<br>
+
+## 4.4 Declaring Advice
+
+- Advice 선언
+
+<br>
+
+### 4.4.1 Before Advice
+
+- `pointcut-ref` 에 지정된 Pointcut이 동작하기 전에 동작하는 메서드 지정
+
+- `<aop:aspect>` 내부에 다음 내용 추가
+
+  ```xml
+  <aop:before pointcut-ref="dataAccessOperation" method="doAccessCheck"/>
+  ```
+
+<br>
+
+### 4.4.2 After Returning Advice
+
+- `pointcut-ref`에 지정된 Pointcut이 동작을 완료한 다음 동작하는 메서드 지정
+
+- `<aop:aspect>` 내부에 다음 내용 추가
+
+  ```xml
+  <aop:after-returning pointcut-ref="dataAccessOperation" method="doAccessCheck"/>
+  ```
+
+<br>
+
+### 4.4.3 After Throwing Advice
+
+- `pointcut-ref`에 지정된 Pointcut이 Exception을 발생시켰을 때 동작하는 메서드 지정
+
+- `<aop:aspect>` 내부에 다음 내용 추가
+
+  ```xml
+  <aop:after-throwing pointcut-ref="dataAccessOperation" method="doRecoveryActions"/>
+  ```
+
+<br>
+
+### 4.4.4 After (Finally) Advice
+
+- `pointcut-ref`에 지정된 Pointcut이 동작을 완료하거나, Exception을 발생시켰을 때 동작하는 메서드 지정
+
+- `<aop:aspect>` 내부에 다음 내용 추가
+
+  ```xml
+  <aop:after pointcut-ref="dataAccessOperation" method="doReleaseLock"/>
+  ```
+
+  

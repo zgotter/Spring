@@ -15,7 +15,7 @@
             <aop:before pointcut-ref="businessService" method="beforeLog"/>
             <aop:after pointcut-ref="businessService" method="afterLog"/>
             <aop:after-returning pointcut-ref="businessService" method="afterReturningLog"/>
-            <aop:after-throwing pointcut-ref="businessService" method="afterThrowingLog" />
+            <aop:after-throwing pointcut-ref="businessService" method="afterThrowingLog"/>
         </aop:aspect>
     </aop:config>
 
