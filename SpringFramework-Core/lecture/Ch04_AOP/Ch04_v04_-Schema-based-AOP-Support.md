@@ -52,5 +52,27 @@
   </bean>
   ```
 
+<br>
 
+## 4.3 Declaring a Pointcut
+
+- Pointcut 선언
+
+- `<aop:aspect>` 안에 다음 내용 추가
+
+  ```xml
+  <aop:pointcut id="businessService" expression="execution(* com.xyz.myapp.service.*.*(..))"/>
+  ```
+
+<br>
+
+### 4.3.1 Pointcut 문법
+
+- `expression` 속성의 값으로 정의되는 부분
+- `execution(* com.xyz.myapp.service.*.*(..))`
+  - `execution` : runtime을 execution 할 때
+  - `com.xyz.myapp.service` : 특정 패키지에 있는 
+  - `*` : 모든 클래스
+  - `*` : 모든 메서드
+  - `(..)` : 모든 Argument
 

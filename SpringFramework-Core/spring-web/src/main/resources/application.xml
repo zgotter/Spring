@@ -11,6 +11,7 @@
 
     <aop:config>
         <aop:aspect id="myAspect" ref="aBean">
+            <aop:pointcut id="businessService" expression="execution(* kr.co.test.cli.aop.AopBean.log())"/>
         </aop:aspect>
     </aop:config>
 
