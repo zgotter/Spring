@@ -166,4 +166,22 @@
   <aop:around pointcut-ref="businessService" method="doBasicProfiling"/>
   ```
 
-  
+- `<aop:around>` 의 `method` 속성에 지정된 메서드는 Argument를 받는다.
+
+- 이 Argument는 proxy 예제에서 봤던 코드와 동일하다.
+
+  ```java
+  public Object doBasicProfiling(ProceedingJoinPoint pjp) throws Throwable {
+      // start stopwatch
+      Object retVal = pjp.proceed();
+      // stop stopwatch
+      return retVal;
+  }
+  ```
+
+<br>
+
+## 4.5 Transcation AOP 실습
+
+
+
