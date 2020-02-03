@@ -11,12 +11,13 @@
 
     <aop:config>
         <aop:aspect id="myAspect" ref="aBean">
-            <aop:pointcut id="businessService" expression="execution(* kr.co.test.cli.aop.Service.*(..))"/>
-            <aop:around pointcut-ref="businessService" method="aroundLog"/>
+            <aop:pointcut id="businessService" expression="execution(* kr.co.test.cli.Dao.insert(..))"/>
+            <aop:around pointcut-ref="businessService" method="aroundTransaction"/>
         </aop:aspect>
     </aop:config>
 
-    <bean id="aBean" class="kr.co.test.cli.aop.AopBean">
+    <bean id="aBean" class="kr.co.test.cli.aop.TransactionBean">
+        <constructor-arg ref="connection"/>
     </bean>
     <bean id="service" class="kr.co.test.cli.aop.Service">
     </bean>
@@ -27,6 +28,7 @@
         <constructor-arg name="user" value="sa" />
         <constructor-arg name="password" value="" />
     </bean>
+
     <bean id="connection" class="java.sql.Connection"
           factory-bean="connectionFactory"
           factory-method="createConnection" />

@@ -17,15 +17,7 @@ public class Dao { // DAO: Data Access Object
 
     public void insert() throws SQLException {
         var statement = connection.createStatement();
-        connection.setAutoCommit(false);
-
-        try {
-            statement.executeUpdate("insert into member (username, password) values ('shkim', '1234')");
-            connection.commit();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            connection.rollback();
-        }
+        statement.executeUpdate("insert into member (username, password) values ('shkim', '1234')");
     }
 
     public void print() throws SQLException {
