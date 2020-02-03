@@ -12,10 +12,7 @@
     <aop:config>
         <aop:aspect id="myAspect" ref="aBean">
             <aop:pointcut id="businessService" expression="execution(* kr.co.test.cli.aop.Service.*(..))"/>
-            <aop:before pointcut-ref="businessService" method="beforeLog"/>
-            <aop:after pointcut-ref="businessService" method="afterLog"/>
-            <aop:after-returning pointcut-ref="businessService" method="afterReturningLog"/>
-            <aop:after-throwing pointcut-ref="businessService" method="afterThrowingLog"/>
+            <aop:around pointcut-ref="businessService" method="aroundLog"/>
         </aop:aspect>
     </aop:config>
 

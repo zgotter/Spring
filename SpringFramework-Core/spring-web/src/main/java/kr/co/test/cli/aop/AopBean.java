@@ -1,24 +1,22 @@
 package kr.co.test.cli.aop;
 
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.ProceedingJoinPoint;
 
 @Slf4j
 public class AopBean {
 
-    public void beforeLog() {
-        log.error(">>> before aop log");
-    }
+    public void aroundLog(ProceedingJoinPoint pjp) {
+        log.error(">>> before around log");
 
-    public void afterLog() {
-        log.error(">>> after aop log");
-    }
+        try {
+            Object proceed = pjp.proceed();
+            log.error(">>> returning aop log");
+        } catch (Throwable throwable) {
+            log.error(">>> throwing aop log");
+        }
 
-    public void afterReturningLog() {
-        log.error(">>> after returning aop log");
-    }
-
-    public void afterThrowingLog() {
-        log.error(">>> after throwing aop log");
+        log.error(">>> after around log");
     }
 
 }

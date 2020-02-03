@@ -154,4 +154,16 @@
   <aop:after pointcut-ref="dataAccessOperation" method="doReleaseLock"/>
   ```
 
+<br>
+
+### 4.4.5 Around Advice
+
+- 4.4.1 ~ 4.4.4 의 모든 기능을 수행할 수 있는 Advice
+
+- `<aop:aspect>` 내부에 다음 내용 추가
+
+  ```xml
+  <aop:around pointcut-ref="businessService" method="doBasicProfiling"/>
+  ```
+
   
