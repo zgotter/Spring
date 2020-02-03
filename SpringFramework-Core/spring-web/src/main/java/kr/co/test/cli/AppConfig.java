@@ -4,10 +4,7 @@ import kr.co.test.cli.annotation.A;
 import kr.co.test.cli.annotation.B;
 import kr.co.test.cli.service.MyService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import java.sql.Connection;
@@ -15,18 +12,8 @@ import java.sql.Connection;
 @Configuration
 @Profile({"default", "dev"})
 @PropertySource("classpath:application-${spring.profiles.active}.properties")
+@EnableAspectJAutoProxy
 public class AppConfig {
-    /*
-    @Bean
-    public B b() {
-        return new B();
-    }
-
-    @Bean(initMethod = "init", destroyMethod = "destroy")
-    public A a(B b) { // 의존성 주입
-        return new A(b);
-    }
-    */
     @Bean
     public Connection connection(ConnectionFactory connectionFactory) {
         return connectionFactory.getConnection();

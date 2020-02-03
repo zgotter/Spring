@@ -1,5 +1,5 @@
 #
-#Mon Feb 03 23:53:17 KST 2020
+#Tue Feb 04 00:18:37 KST 2020
 kr.co.test.cli.res.ResourceExample=org.springframework.stereotype.Component
 kr.co.test.cli.annotation.AppConfig=org.springframework.stereotype.Component
 kr.co.test.cli.AppConfig=org.springframework.stereotype.Component
