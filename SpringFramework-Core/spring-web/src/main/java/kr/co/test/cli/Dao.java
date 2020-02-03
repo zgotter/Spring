@@ -18,6 +18,7 @@ public class Dao { // DAO: Data Access Object
     public void insert() throws SQLException {
         var statement = connection.createStatement();
         statement.executeUpdate("insert into member (username, password) values ('shkim', '1234')");
+        throw new RuntimeException("db error");
     }
 
     public void print() throws SQLException {
