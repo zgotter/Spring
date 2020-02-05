@@ -265,3 +265,83 @@
   - 그러므로 이 값을 지우고 보내게 되면 새로운 사용자로 인식하게 된다.
   - Request Header에 JSESSIONID가 없으면, 즉 새로운 사용자라면, Response Header에 Set-Cookie를 통해 JSESSIONID를 전달하게 된다.
 
+<br>
+
+## 4.8 Embedded Tomcat
+
+- 톰캣 자체로 jar로 된 라이브러리이기 때문에 `pom.xml`에 의존성을 설정한 다음 인텔리제이에서 사용할 수 있다.
+
+<br>
+
+### 4.8.1 `pom.xml` 설정
+
+- `<properties>` 부분에 톰캣 버전을 명시한다.
+
+  ```xml
+  <tomcat.version>8.5.23</tomcat.version>
+  ```
+
+- `<dependencies>`에 아래와 같이 dependency를 추가한다.
+
+  ```xml
+  <dependency>
+  	<groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-core</artifactId>
+      <version>${tomcat.version}</version>
+  </dependency>
+  <dependency>
+  	<groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <version>${tomcat.version}</version>
+  </dependency>
+  <dependency>
+  	<groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jasper</artifactId>
+      <version>${tomcat.version}</version>
+  </dependency>
+  <dependency>
+  	<groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jasper-el</artifactId>
+      <version>${tomcat.version}</version>
+  </dependency>
+  <dependency>
+  	<groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jsp-api</artifactId>
+      <version>${tomcat.version}</version>
+  </dependency>
+  ```
+
+- 이렇게 하면 해당 프로젝트는 톰캣을 내부적으로 갖고 있기 때문에 톰캣을 따로 띄우고 war 파일을 올리지 않아도 어플리케이션 실행 자체로 war가 실행 가능하다.
+
+<br>
+
+### 4.8.2 shade Mainclass 변경
+
+- shade execution의 MainClass를 `kr.co.test.web.Main`으로 변경
+
+<br>
+
+### 4.8.3 `web.Main` 생성
+
+- `web` 패키지 하위에 `Main` 클래스 생성
+
+- `Main` 클래스 내부에 톰캣이 돌아갈 수 있는 코드 구현
+
+<br>
+
+### 4.8.4 annotation을 이용한 Servlet 설정
+
+- Servlet 3.0부터 추가된 annotation 기법을 이용해서 `web.xml` 없이 Servlet 설정을 할 수 있도록 변경
+
+<br>
+
+- `web.xml` 삭제
+- `SimpleServlet`에 `@WebServlet` annotation 추가
+- `SimpleFilter`에 `@WebFilter` annotation 추가
+
+<br>
+
+### 4.8.5 실행
+
+- `web.Main` 을 실행시켜서 톰캣 실행
+
