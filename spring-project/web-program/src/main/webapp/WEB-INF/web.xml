@@ -14,6 +14,16 @@
         <servlet-name>simple</servlet-name>
         <url-pattern>/simple</url-pattern><!-- 해당 url pattern으로 접근했을 때 위의 servlet 태그를 동작시켜라 -->
     </servlet-mapping>
+    
+    <filter>
+        <filter-name>simpleFilter</filter-name>
+        <filter-class>kr.co.test.web.SimpleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>simpleFilter</filter-name>
+        <url-pattern>/simple</url-pattern>
+    </filter-mapping>
+    
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file><!-- webapp 디렉토리 하위에 위치 -->
     </welcome-file-list>

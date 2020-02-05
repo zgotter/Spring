@@ -237,3 +237,11 @@
   - 기본 URL 뒤에 war 파일명(`springbasic`)을 입력하여 접속하면 설정한 JSP 파일이 열리게 된다.
 - `http://localhost:8080/springbasic/simple`
   - `SimpleServlet.java` 파일 내용이 실행된다.
+
+<br>
+
+## 4.6 Servlet Filter
+
+- Servlet이 동작하기 앞 또는 후에 필터 기능을 하는 것
+- 주로 로그인한 사용자의 인증 처리 등에 사용
+-  
