@@ -244,4 +244,24 @@
 
 - Servlet이 동작하기 앞 또는 후에 필터 기능을 하는 것
 - 주로 로그인한 사용자의 인증 처리 등에 사용
--  
+-  `web.xml`에서 설정
+
+<br>
+
+## 4.7 Session
+
+- 로그인된 사용자의 정보를 Session을 통해 관리
+- Session은 Serlvlet request에서 가져올 수 있다.
+- Session은 Http Header의 cookie값을 이용해서 session을 관리한다.
+
+<br>
+
+### 4.7.1 서버 단에서의 Session 관리
+
+- Http는 상태가 없는 프로토콜이다.
+- 하지만 상태라는 것이 없으면 사용자 구별이 안 되기 때문에 보통 Header를 통해서 사용자 식별을 한다.
+- Header - Cookie의 "JSESSIONID"
+  - 이 JSESSIONID를 통해서 톰캣이 사용자 식별을 하고 있는 것이다.
+  - 그러므로 이 값을 지우고 보내게 되면 새로운 사용자로 인식하게 된다.
+  - Request Header에 JSESSIONID가 없으면, 즉 새로운 사용자라면, Response Header에 Set-Cookie를 통해 JSESSIONID를 전달하게 된다.
+
