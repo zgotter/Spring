@@ -180,6 +180,8 @@
 
 - `@Around` annotation을 사용하여 5.4.1 ~ 5.4.4의 모든 기능을 사용할 수 있는 Around Advice를 선언할 수 있다.
 
+- `@Around()` annotation의 매개변수로 Pointcut의 메서드명만 넣어주면 된다.
+
   ```java
   import org.aspectj.lang.annotation.Aspect;
   import org.aspectj.lang.annotation.Around;
