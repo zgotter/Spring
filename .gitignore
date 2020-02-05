@@ -1934,3 +1934,6 @@ spring-project/cli-program/target/surefire-reports/test.BeanScopeTest.txt
 spring-project/cli-program/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
 spring-project/cli-program/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 spring-project/cli-program/target/classes/application-dev.properties
+spring-project/tomcat/
+spring-project/web-program/target/
+spring-project/web-program/.idea/
