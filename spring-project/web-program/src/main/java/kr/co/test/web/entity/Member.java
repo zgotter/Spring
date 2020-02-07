@@ -1,4 +1,4 @@
-package kr.co.test.cli.entity;
+package kr.co.test.web.entity;
 
 import lombok.*;
 

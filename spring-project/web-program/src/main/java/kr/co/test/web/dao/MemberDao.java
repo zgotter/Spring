@@ -1,14 +1,11 @@
-package kr.co.test.cli.dao;
+package kr.co.test.web.dao;
 
-import kr.co.test.cli.entity.Member;
+import kr.co.test.web.entity.Member;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.datasource.DataSourceUtils;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.sql.DataSource;
-import java.sql.ResultSet;
+import javax.annotation.PostConstruct;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -17,20 +14,25 @@ public class MemberDao { // DAO: Data Access Object
 
     private JdbcTemplate jdbcTemplate;
 
+    @PostConstruct
+    void init() {
+        jdbcTemplate.update("create table member(id int auto_increment, username varchar(255) not null, password varchar(255) not null, primary key(id))");
+        jdbcTemplate.update("insert into member(username, password) values('shkim', '1234')");
+    }
+
     public MemberDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
     @Transactional
-    public void insert(String username, String password) throws SQLException {
+    public void insert(String username, String password) {
         jdbcTemplate.update("insert into member (username, password) values (?, ?)", username, password);
 
     }
 
-    public void print() throws SQLException {
-        List<Member> list = jdbcTemplate.query("select id, username, password from member",
+    public List<Member> list() {
+        return jdbcTemplate.query("select id, username, password from member",
                 (resultSet, i) -> new Member(resultSet));
-        list.forEach(x -> log.info(">> Member: " + x.getUsername() + "/" + x.getPassword()));
     }
 
 }
